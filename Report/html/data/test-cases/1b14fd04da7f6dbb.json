@@ -1,0 +1,232 @@
+{
+  "uid" : "1b14fd04da7f6dbb",
+  "name" : "test_one.test_get_admin_user_info_01",
+  "fullName" : "TestCase.test_one.test_get_admin_user_info_01",
+  "historyId" : "db69ef7a45c32dcf92d2acfdd0291a62",
+  "time" : {
+    "start" : 1562914725591,
+    "stop" : 1562914725915,
+    "duration" : 324
+  },
+  "description" : "\n    获取用户权限列表\n    :param login: 预制登录信息 获取授权authorization:\n    :return:\n    ",
+  "descriptionHtml" : "<pre><code>获取用户权限列表\n:param login: 预制登录信息 获取授权authorization:\n:return:\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "取用户权限列表",
+      "time" : {
+        "start" : 1562914725593,
+        "stop" : 1562914725910,
+        "duration" : 317
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "请求内容",
+        "time" : {
+          "start" : 1562914725595,
+          "stop" : 1562914725910,
+          "duration" : 315
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "method:GET",
+          "time" : {
+            "start" : 1562914725595,
+            "stop" : 1562914725595,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "url:http://gateway.bicai365.com/admin/user/info",
+          "time" : {
+            "start" : 1562914725595,
+            "stop" : 1562914725595,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "headers:{'authorization': 'Bearer f5836910-6c43-4825-b8ea-f40e94be8666', 'origin': 'http://manager.bicai365.com', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36', 'content-type': 'application/json;charset=UTF-8', 'accept': '*/*', 'cache-control': 'no-cache', 'postman-token': 'a2336e2d-770c-81bc-919a-5192d95a912e'}",
+          "time" : {
+            "start" : 1562914725723,
+            "stop" : 1562914725723,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        }, {
+          "name" : "payload为空",
+          "time" : {
+            "start" : 1562914725723,
+            "stop" : 1562914725910,
+            "duration" : 187
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 4,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "响应报文:",
+        "time" : {
+          "start" : 1562914725910,
+          "stop" : 1562914725910,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "act_results:{\"code\":\"S_SUCCESS\",\"message\":\"成功\",\"data\":{\"userId\":1,\"username\":\"admin\",\"password\":\"{bcrypt}$2a$10$KmPKKa76nt0EhpE/vrwGOuU/5EVY7ZAMkHfC74f63c0WzkiGePXle\",\"createTime\":\"2018-08-06 14:44:42\",\"updateTime\":\"2019-07-11 06:51:41\",\"delFlag\":\"0\",\"lockFlag\":\"0\",\"phone\":\"18610987786\",\"deptId\":3,\"deptName\":\"比财数据科技\",\"deptCode\":\"bicai_data\",\"permissions\":[\"explosive\",\"proposal_detail\",\"app_button_del\",\"praise_add\",\"bank_detail\",\"market_product\",\"index_peroid_detail\",\"support_deposit_upd\",\"sidebar_list\",\"member_manager_list\",\"bank\",\"member_manager\",\"market_coupon_recevie_exp\",\"market_welfare_packet\",\"market_coupon_upd\",\"member_setting\",\"market_packet_add\",\"advertis_manage_add\",\"market_image_up\",\"member_badge_wall_del\",\"explosive_add\",\"member_manager_del_label\",\"sys_dict_del\",\"producut_center\",\"advertis_add\",\"index_peroid\",\"member_manager_add_label\",\"proposal_del\",\"sys_user_add\",\"commend_add\",\"news_manage_upd\",\"advertis_list\",\"explosive_detail\",\"yuebao_rate_upd\",\"activity_button_add\",\"login_page_spread_del\",\"member_mission_list\",\"bank_card\",\"ctivity__button_upd_status\",\"member_label_list\",\"bank_card_upd\",\"member_mission_detail\",\"member_label_detail\",\"sys_dict_edit\",\"sidebar_upd\",\"index_peroid_del\",\"mission_tab_add\",\"advertis_manage\",\"member_manager_upd_status\",\"market_activity_upd_status\",\"market_welfare\",\"client_version\",\"black_list_del\",\"edit-log\",\"market_coupon_list\",\"client_version_list\",\"notice_del\",\"news_manage\",\"yuebao_rate_add\",\"black_list_add\",\"market_packet_upd\",\"yuebao_rate_list\",\"black_list\",\"support_deposit_add\",\"login_page_spread_add\",\"advertis_del\",\"sys_role_edit\",\"market_packet_upd_status\",\"explosive_upd\",\"commend_list\",\"client_version_del\",\"sys_role_del\",\"commend_del\",\"advertis\",\"advertis_manage_del\",\"protocol_private_upd\",\"app_button_add\",\"bank_card_del\",\"export_user_account\",\"sys_dept_edit\",\"market_activity_add\",\"index_peroid_upd\",\"market_coupon_recevie_list\",\"black_list_detail\",\"ctivity__button_list\",\"sidebar_add\",\"news_manage_list\",\"yuebao_rate_detail\",\"bank_del\",\"sidebar_detail\",\"advertis_detail\",\"setting_image_up\",\"user_purchase_prd_list\",\"member_mission_del\",\"member_level_del\",\"proposal_add\",\"mission_tab_upd\",\"notice\",\"sys_dict_add\",\"login_page_spread\",\"sys_member\",\"app_button_list\",\"member_label_del\",\"notice_add\",\"commend\",\"advertis_manage_list\",\"market_packet_list\",\"login_page_spread_list\",\"notice_list\",\"market_activity\",\"comment\",\"user_purchase_org_list\",\"client_version_detail\",\"black_list_upd\",\"sys_user_edit\",\"member_level_list\",\"sys_menu_del\",\"login_page_spread_upd\",\"batch_upd_level_status\",\"sidebar\",\"news_manage_del\",\"comment_list\",\"sys_dept_add\",\"market_welfare_coupon\",\"yuebao_rate_del\",\"notice_upd\",\"channelType_info\",\"protocol_private_list\",\"support_deposit\",\"sidebar_del\",\"support_deposit_list\",\"mission_tab_list\",\"market_activity_upd\",\"market_coupon_upd_status\",\"member_badge_wall_detail\",\"bank_add\",\"roposal\",\"app_button_upd\",\"bank_card_list\",\"member_mission_add\",\"sys_menu_edit\",\"comment_reply_add\",\"news_manage_detail\",\"member_level_upd\",\"market_coupon_del\",\"user_account_list\",\"batch_add_label\",\"proposal_list\",\"comment_del\",\"explosive_list\",\"member_label_add\",\"proposal_upd\",\"member_badge_wall_list\",\"protocol_private_add\",\"bank_card_detail\",\"app_button_detail\",\"support_deposit_detail\",\"export_user_purchase\",\"member_badge_wall_add\",\"client_version_add\",\"ctivity__button_del\",\"login_page_spread_upd_status\",\"market_packet_detail\",\"ctivity__button_detail\",\"market_coupon_add\",\"advertis_manage_upd\",\"sys_dept_del\",\"home_page_button\",\"commend_detail\",\"comment_reply_del\",\"yuebao_rate\",\"ctivity__button_upd\",\"market_coupon_detail\",\"app_button_upd_status\",\"member_mission_upd_status\",\"bank_upd\",\"sys_market\",\"black_list_list\",\"app_setting\",\"praise_del\",\"advertis_manage_detail\",\"sys_user_del\",\"sys_menu_add\",\"notice_detail\",\"comment_add\",\"member_mission_upd\",\"index_peroid_list\",\"advertis_upd\",\"market_activity_detail\",\"member_badge_wall_upd_status\",\"bank_list\",\"news_manage_add\",\"mission_tab_del\",\"commend_upd\",\"member_level_add\",\"sys_setting\",\"market_coupon_upd_num\",\"market_activity_del\",\"member_label_upd\",\"bank_card_add\",\"protocol_private_del\",\"mission_tab_detail\",\"protocol_private\",\"index_peroid_add\",\"login_page_spread_detail\",\"user_account_org_list\",\"market_packet_del\",\"sys_role_add\",\"market_activity_list\",\"member_badge_wall\",\"client_version_upd\",\"member_level_detail\",\"member_manager_detail\",\"explosive_del\",\"protocol_private_detail\",\"comment_detail\",\"support_deposit_del\",\"sys_role_perm\",\"member_mission\",\"member_badge_wall_upd\",\"mission_tab_upd_status\"],\"roles\":[\"ROLE_ADMIN\"]},\"success\":true}",
+          "time" : {
+            "start" : 1562914725910,
+            "stop" : 1562914725910,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : false
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "断言success对比",
+      "time" : {
+        "start" : 1562914725910,
+        "stop" : 1562914725914,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "预期结果:True与实际结果True做对比",
+        "time" : {
+          "start" : 1562914725914,
+          "stop" : 1562914725914,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "e6d118b302546e9e",
+      "name" : "Captured log call",
+      "source" : "e6d118b302546e9e.txt",
+      "type" : "text/plain",
+      "size" : 1229
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 10,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Admin_User"
+  }, {
+    "name" : "feature",
+    "value" : "获取用户权限列表"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "xuchendeMacBook-Pro.local"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "blocker"
+  }, {
+    "name" : "thread",
+    "value" : "1612-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "TestCase"
+  }, {
+    "name" : "testClass",
+    "value" : "TestCase"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_one.test_get_admin_user_info_01"
+  }, {
+    "name" : "package",
+    "value" : "TestCase"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "blocker",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1b14fd04da7f6dbb.json",
+  "parameterValues" : [ ]
+}

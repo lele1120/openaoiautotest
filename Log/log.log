@@ -1,0 +1,8 @@
+[INFO 2019-07-12 14:56:04]初始化配置文件, path=/Users/xuchen/PycharmProjects/openaoiautotest/Conf/config.ini
+[INFO 2019-07-12 14:56:04]执行用例集为：--allure_features=Admin_User
+[INFO 2019-07-12 14:58:45]初始化配置文件, path=/Users/xuchen/PycharmProjects/openaoiautotest/Conf/config.ini
+[INFO 2019-07-12 14:58:45]执行用例集为：--allure_features=Admin_User
+[INFO 2019-07-12 14:58:45]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+[INFO 2019-07-12 14:58:45]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+[INFO 2019-07-12 14:58:45]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+[INFO 2019-07-12 14:58:45]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics

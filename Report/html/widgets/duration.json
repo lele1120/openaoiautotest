@@ -1,0 +1,11 @@
+[ {
+  "uid" : "1b14fd04da7f6dbb",
+  "name" : "test_one.test_get_admin_user_info_01",
+  "time" : {
+    "start" : 1562914725591,
+    "stop" : 1562914725915,
+    "duration" : 324
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+} ]

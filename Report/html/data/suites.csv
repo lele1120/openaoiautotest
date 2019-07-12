@@ -1,0 +1,6 @@
+"Status","Name","Duration in ms","Description"
+"passed","TestCase.test_one.test_get_admin_user_info_01","324","
+    获取用户权限列表
+    :param login: 预制登录信息 获取授权authorization:
+    :return:
+    "

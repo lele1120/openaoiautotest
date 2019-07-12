@@ -1,0 +1,37 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Admin_User",
+    "children" : [ {
+      "name" : "test_one.test_get_admin_user_info_01",
+      "uid" : "1b14fd04da7f6dbb",
+      "parentUid" : "2f94c18ac1f62987f440e0f98ecedc46",
+      "status" : "passed",
+      "time" : {
+        "start" : 1562914725591,
+        "stop" : 1562914725915,
+        "duration" : 324
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "2f94c18ac1f62987f440e0f98ecedc46"
+  }, {
+    "name" : "获取用户权限列表",
+    "children" : [ {
+      "name" : "test_one.test_get_admin_user_info_01",
+      "uid" : "1b14fd04da7f6dbb",
+      "parentUid" : "1bed4a1ca61a891b6a67c60a019edfa6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1562914725591,
+        "stop" : 1562914725915,
+        "duration" : 324
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "1bed4a1ca61a891b6a67c60a019edfa6"
+  } ]
+}
