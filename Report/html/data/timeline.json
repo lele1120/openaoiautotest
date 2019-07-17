@@ -2,24 +2,204 @@
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "name" : "timeline",
   "children" : [ {
-    "name" : "xuchendeMacBook-Pro.local",
+    "name" : "bogon",
     "children" : [ {
-      "name" : "1612-MainThread",
+      "name" : "2088-MainThread",
       "children" : [ {
-        "name" : "test_one.test_get_admin_user_info_01",
-        "uid" : "1b14fd04da7f6dbb",
-        "parentUid" : "192e791d6edc4ccab46ff36f8e22c7a6",
+        "name" : "test_jch.test_api_query_hold_info_sh_13",
+        "uid" : "2fb326416b093024",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
         "status" : "passed",
         "time" : {
-          "start" : 1562914725591,
-          "stop" : 1562914725915,
-          "duration" : 324
+          "start" : 1563354222577,
+          "stop" : 1563354225782,
+          "duration" : 3205
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_api_query_bank_center_zq_14",
+        "uid" : "6de0b904f2ba0919",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354225784,
+          "stop" : 1563354229217,
+          "duration" : 3433
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_api_query_bank_center_cz_07",
+        "uid" : "c4e6b2fa9707c050",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354208984,
+          "stop" : 1563354212182,
+          "duration" : 3198
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_api_query_bank_center_tx_16",
+        "uid" : "3b1f1d44bf97e23b",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354231208,
+          "stop" : 1563354234497,
+          "duration" : 3289
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_api_cash_15",
+        "uid" : "e2c210cf22ac51a",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354229218,
+          "stop" : 1563354231207,
+          "duration" : 1989
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_api_redemption_12",
+        "uid" : "a2952c915740e13a",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354221753,
+          "stop" : 1563354222575,
+          "duration" : 822
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_api_query_org_bind_card_cz_04",
+        "uid" : "acf9d50c1257a027",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354204827,
+          "stop" : 1563354206663,
+          "duration" : 1836
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_api_recharge_05",
+        "uid" : "f0eb7279637815cb",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354206665,
+          "stop" : 1563354207759,
+          "duration" : 1094
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_api_query_bank_center_02",
+        "uid" : "91a80103d09cde0",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354202801,
+          "stop" : 1563354204707,
+          "duration" : 1906
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_api_query_hold_info_10",
+        "uid" : "9b6947a47c3a15c8",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354219262,
+          "stop" : 1563354221337,
+          "duration" : 2075
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_api_buy_08",
+        "uid" : "eca87545db6f2704",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354212184,
+          "stop" : 1563354213186,
+          "duration" : 1002
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_api_recharge_confirm_06",
+        "uid" : "203bacd52b764300",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354207761,
+          "stop" : 1563354208982,
+          "duration" : 1221
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_api_query_bank_center_cr_09",
+        "uid" : "cf465009b4cfb62b",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354213188,
+          "stop" : 1563354219260,
+          "duration" : 6072
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_api_trade_check_cz_03",
+        "uid" : "91256964be467a1c",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354204708,
+          "stop" : 1563354204825,
+          "duration" : 117
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_query_login_status_01",
+        "uid" : "712b68505078ba6a",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354202404,
+          "stop" : 1563354202799,
+          "duration" : 395
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_jch.test_interest_calculatioin_11",
+        "uid" : "38fe41db5d65f1d0",
+        "parentUid" : "30097b37990c5396426dfcc96cd8f9e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1563354221338,
+          "stop" : 1563354221751,
+          "duration" : 413
         },
         "flaky" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "192e791d6edc4ccab46ff36f8e22c7a6"
+      "uid" : "30097b37990c5396426dfcc96cd8f9e2"
     } ],
-    "uid" : "96da773c3f498fa37f00b4f246fb0f30"
+    "uid" : "2073f7d556df5d27a604e307fdf127df"
   } ]
 }

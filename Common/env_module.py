@@ -30,11 +30,11 @@ class EnvModule:
         :return:
         """
         if self.env == "debug":
-            login_url = 'http://' + self.config.loginHost_debug
+            login_url = 'https://' + self.config.loginHost_debug
             return login_url
 
         elif self.env == "release":
-            login_url = 'http://' + self.config.loginHost_release
+            login_url = 'https://' + self.config.loginHost_release
             return login_url
         else:
             print("get url error")

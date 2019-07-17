@@ -2,36 +2,456 @@
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "name" : "behaviors",
   "children" : [ {
-    "name" : "Admin_User",
+    "name" : "jch",
     "children" : [ {
-      "name" : "test_one.test_get_admin_user_info_01",
-      "uid" : "1b14fd04da7f6dbb",
-      "parentUid" : "2f94c18ac1f62987f440e0f98ecedc46",
+      "name" : "test_jch.test_query_login_status_01",
+      "uid" : "712b68505078ba6a",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
       "status" : "passed",
       "time" : {
-        "start" : 1562914725591,
-        "stop" : 1562914725915,
-        "duration" : 324
+        "start" : 1563354202404,
+        "stop" : 1563354202799,
+        "duration" : 395
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_api_query_bank_center_02",
+      "uid" : "91a80103d09cde0",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354202801,
+        "stop" : 1563354204707,
+        "duration" : 1906
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_api_trade_check_cz_03",
+      "uid" : "91256964be467a1c",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354204708,
+        "stop" : 1563354204825,
+        "duration" : 117
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_api_query_org_bind_card_cz_04",
+      "uid" : "acf9d50c1257a027",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354204827,
+        "stop" : 1563354206663,
+        "duration" : 1836
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_api_recharge_05",
+      "uid" : "f0eb7279637815cb",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354206665,
+        "stop" : 1563354207759,
+        "duration" : 1094
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_api_recharge_confirm_06",
+      "uid" : "203bacd52b764300",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354207761,
+        "stop" : 1563354208982,
+        "duration" : 1221
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_api_query_bank_center_cz_07",
+      "uid" : "c4e6b2fa9707c050",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354208984,
+        "stop" : 1563354212182,
+        "duration" : 3198
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_api_buy_08",
+      "uid" : "eca87545db6f2704",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354212184,
+        "stop" : 1563354213186,
+        "duration" : 1002
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_api_query_bank_center_cr_09",
+      "uid" : "cf465009b4cfb62b",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354213188,
+        "stop" : 1563354219260,
+        "duration" : 6072
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_api_query_hold_info_10",
+      "uid" : "9b6947a47c3a15c8",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354219262,
+        "stop" : 1563354221337,
+        "duration" : 2075
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_interest_calculatioin_11",
+      "uid" : "38fe41db5d65f1d0",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354221338,
+        "stop" : 1563354221751,
+        "duration" : 413
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_api_redemption_12",
+      "uid" : "a2952c915740e13a",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354221753,
+        "stop" : 1563354222575,
+        "duration" : 822
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_api_query_hold_info_sh_13",
+      "uid" : "2fb326416b093024",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354222577,
+        "stop" : 1563354225782,
+        "duration" : 3205
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_api_query_bank_center_zq_14",
+      "uid" : "6de0b904f2ba0919",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354225784,
+        "stop" : 1563354229217,
+        "duration" : 3433
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_api_cash_15",
+      "uid" : "e2c210cf22ac51a",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354229218,
+        "stop" : 1563354231207,
+        "duration" : 1989
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_jch.test_api_query_bank_center_tx_16",
+      "uid" : "3b1f1d44bf97e23b",
+      "parentUid" : "28178444d947a4842c19b922650b63c3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354231208,
+        "stop" : 1563354234497,
+        "duration" : 3289
       },
       "flaky" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "2f94c18ac1f62987f440e0f98ecedc46"
+    "uid" : "28178444d947a4842c19b922650b63c3"
   }, {
-    "name" : "获取用户权限列表",
+    "name" : "用户开户状态查询（温旭雲）",
     "children" : [ {
-      "name" : "test_one.test_get_admin_user_info_01",
-      "uid" : "1b14fd04da7f6dbb",
-      "parentUid" : "1bed4a1ca61a891b6a67c60a019edfa6",
+      "name" : "test_jch.test_query_login_status_01",
+      "uid" : "712b68505078ba6a",
+      "parentUid" : "fdb8485858acb8aaafed028db2013501",
       "status" : "passed",
       "time" : {
-        "start" : 1562914725591,
-        "stop" : 1562914725915,
-        "duration" : 324
+        "start" : 1563354202404,
+        "stop" : 1563354202799,
+        "duration" : 395
       },
       "flaky" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "1bed4a1ca61a891b6a67c60a019edfa6"
+    "uid" : "fdb8485858acb8aaafed028db2013501"
+  }, {
+    "name" : "资产首页--(郝志阳)",
+    "children" : [ {
+      "name" : "test_jch.test_api_query_bank_center_02",
+      "uid" : "91a80103d09cde0",
+      "parentUid" : "b74bc9360f44a3f58f37aba4e4ac761a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354202801,
+        "stop" : 1563354204707,
+        "duration" : 1906
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "b74bc9360f44a3f58f37aba4e4ac761a"
+  }, {
+    "name" : "交易通用校验(黄新)-充值",
+    "children" : [ {
+      "name" : "test_jch.test_api_trade_check_cz_03",
+      "uid" : "91256964be467a1c",
+      "parentUid" : "8f0b49a6e4093329476968efe05a2b8e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354204708,
+        "stop" : 1563354204825,
+        "duration" : 117
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "8f0b49a6e4093329476968efe05a2b8e"
+  }, {
+    "name" : "机构绑卡列表查询",
+    "children" : [ {
+      "name" : "test_jch.test_api_query_org_bind_card_cz_04",
+      "uid" : "acf9d50c1257a027",
+      "parentUid" : "5cfc5ae7ce63fd7813cbfc898e3a9d55",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354204827,
+        "stop" : 1563354206663,
+        "duration" : 1836
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "5cfc5ae7ce63fd7813cbfc898e3a9d55"
+  }, {
+    "name" : "充值(黄新)",
+    "children" : [ {
+      "name" : "test_jch.test_api_recharge_05",
+      "uid" : "f0eb7279637815cb",
+      "parentUid" : "2e570611ca833a16a30e1767f2f0901e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354206665,
+        "stop" : 1563354207759,
+        "duration" : 1094
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "2e570611ca833a16a30e1767f2f0901e"
+  }, {
+    "name" : "充值确认(黄新)",
+    "children" : [ {
+      "name" : "test_jch.test_api_recharge_confirm_06",
+      "uid" : "203bacd52b764300",
+      "parentUid" : "a0b8e321dd5355f228ed594cd3c03374",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354207761,
+        "stop" : 1563354208982,
+        "duration" : 1221
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "a0b8e321dd5355f228ed594cd3c03374"
+  }, {
+    "name" : "充值后查询余额",
+    "children" : [ {
+      "name" : "test_jch.test_api_query_bank_center_cz_07",
+      "uid" : "c4e6b2fa9707c050",
+      "parentUid" : "41a08d430312682f5885a25131d2599c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354208984,
+        "stop" : 1563354212182,
+        "duration" : 3198
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "41a08d430312682f5885a25131d2599c"
+  }, {
+    "name" : "购买(黄新)",
+    "children" : [ {
+      "name" : "test_jch.test_api_buy_08",
+      "uid" : "eca87545db6f2704",
+      "parentUid" : "75db8668451cf06339335c9122da502d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354212184,
+        "stop" : 1563354213186,
+        "duration" : 1002
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "75db8668451cf06339335c9122da502d"
+  }, {
+    "name" : "存入后查询余额",
+    "children" : [ {
+      "name" : "test_jch.test_api_query_bank_center_cr_09",
+      "uid" : "cf465009b4cfb62b",
+      "parentUid" : "6dca8c2fa44d2eb47fa072f9617e4dbc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354213188,
+        "stop" : 1563354219260,
+        "duration" : 6072
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "6dca8c2fa44d2eb47fa072f9617e4dbc"
+  }, {
+    "name" : "持有列表--(郝志阳)",
+    "children" : [ {
+      "name" : "test_jch.test_api_query_hold_info_10",
+      "uid" : "9b6947a47c3a15c8",
+      "parentUid" : "1af1d1947ed05dcc9af7857a51a6ecef",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354219262,
+        "stop" : 1563354221337,
+        "duration" : 2075
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "1af1d1947ed05dcc9af7857a51a6ecef"
+  }, {
+    "name" : "赎回利息试算(黄新)",
+    "children" : [ {
+      "name" : "test_jch.test_interest_calculatioin_11",
+      "uid" : "38fe41db5d65f1d0",
+      "parentUid" : "41950670b259e79508002db90e392a0e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354221338,
+        "stop" : 1563354221751,
+        "duration" : 413
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "41950670b259e79508002db90e392a0e"
+  }, {
+    "name" : "赎回(黄新)",
+    "children" : [ {
+      "name" : "test_jch.test_api_redemption_12",
+      "uid" : "a2952c915740e13a",
+      "parentUid" : "06076fb7f35f60c7c00de21bbceb9fdb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354221753,
+        "stop" : 1563354222575,
+        "duration" : 822
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "06076fb7f35f60c7c00de21bbceb9fdb"
+  }, {
+    "name" : "持有列表-赎回后--(郝志阳)",
+    "children" : [ {
+      "name" : "test_jch.test_api_query_hold_info_sh_13",
+      "uid" : "2fb326416b093024",
+      "parentUid" : "eecc4cc95208068b1df717268802e987",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354222577,
+        "stop" : 1563354225782,
+        "duration" : 3205
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "eecc4cc95208068b1df717268802e987"
+  }, {
+    "name" : "支取后查询余额",
+    "children" : [ {
+      "name" : "test_jch.test_api_query_bank_center_zq_14",
+      "uid" : "6de0b904f2ba0919",
+      "parentUid" : "6dd689b6802947d7bc4bf9ba03f125dd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354225784,
+        "stop" : 1563354229217,
+        "duration" : 3433
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "6dd689b6802947d7bc4bf9ba03f125dd"
+  }, {
+    "name" : "提现(黄新)",
+    "children" : [ {
+      "name" : "test_jch.test_api_cash_15",
+      "uid" : "e2c210cf22ac51a",
+      "parentUid" : "655c35d8e84b16cb58c4a85a215befc9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354229218,
+        "stop" : 1563354231207,
+        "duration" : 1989
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "655c35d8e84b16cb58c4a85a215befc9"
+  }, {
+    "name" : "提现后查询余额",
+    "children" : [ {
+      "name" : "test_jch.test_api_query_bank_center_tx_16",
+      "uid" : "3b1f1d44bf97e23b",
+      "parentUid" : "a1c0ab79814ad0087279484b31ff7d5f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1563354231208,
+        "stop" : 1563354234497,
+        "duration" : 3289
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "a1c0ab79814ad0087279484b31ff7d5f"
   } ]
 }
