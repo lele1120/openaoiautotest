@@ -3,7 +3,7 @@
 # @Author  : XuChen
 # @File    : run.py
 
-from Common import email_module, log_module, Consts, Shell
+from Common import email_module, log_module, Consts, Shell, dd_module
 from Conf import Config
 import pytest
 if __name__ == '__main__':
@@ -44,6 +44,9 @@ if __name__ == '__main__':
     print("失败" + str(error_number) + "个测试用例")
     print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
 
+    if error_number == 0:
+        dingding = dd_module.SendDingDing()
+        dingding.sendDingDing()
     # try:
     #     mail = email_module.SendMail()
     #     mail.sendMail()
