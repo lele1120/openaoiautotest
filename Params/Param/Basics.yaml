@@ -1,492 +1,114 @@
 
 ---
-name: login
-# 用户登录
-url: /auth/oauth/token
-method: POST
-payload: {"grant_type": "password", "password": "123456", "scope": "server", "username": "admin"}
+name: query_login_status
+# 用户开户状态查询（温旭雲）
+url: /openapi/account/v2/queryLoginStatus
+method: post
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203"}}
 check: {
-        "scope":"server", "license":"madeby  bicai"
+        "code": "0",
+        "hasLogin":"0",
+        "hasOpenBank":"1"
        }
 
 ---
-name: get_admin_user_info
-url: /admin/user/info
-method: GET
+name: api_query_bank_center
+# 资产首页--(郝志阳)
+url: /openapi/bank/v2/apiQueryBankCenter
+method: post
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203"}}
 check: {
-        "success": true
+        "code": "0",
        }
 
 ---
-name: get_admin_user_userPage
-url: /admin/user/userPage
-# 1.1获取用户列表
-method: GET
-payload: {"pageSize":"10","pageNum":"1"}
+name: api_trade_check
+# 交易通用校验(黄新)
+url: /openapi/biz/v2/apiTradeCheck
+method: post
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","tradeType":}}
 check: {
-        "success": true
+        "code": "0",
        }
 
 ---
-name: get_admin_user_userPage_by_username
-# 根据用户名获取用户列表
-url: /admin/user/userPage
-method: GET
-payload: {"username":""}
+name: api_query_org_bind_card
+# 机构绑卡列表查询
+url: /openapi/comm/v2/apiQueryOrgBindCard
+method: post
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","bizType":"3","queryType":"0","transAmt":""}}
 check: {
-        "success": true
-       }
-
-
----
-name: add_admin_user
-# 1.2添加用户
-url: /admin/user
-method: POST
-#payload: "{\"username\":\"test1\",\"deptId\":4,\"roles\":[38],\"phone\":\"13911111111\",\"delFlag\":\"0\",\"newpassword1\":\"123456\"}"
-payload: "{\"username\":\"test1\",\"deptId\":4,\"roles\":[38],\"phone\":\"13911111111\",\"lockFlag\":\"0\",\"password\":\"123456\"}"
-check: {
-        "success": true,
-        "code":"B_USER_OR_MOBILE_EXISTS",
-        "message":"已存在相同用户名或手机",
-        "success1":false
-       }
-
-
----
-name: modify_user_phone
-# 1.3修改用户
-url: /admin/user
-method: PUT
-payload: "{\"username\":\"test1\",\"deptId\":4,\"roles\":[38],\"phone\":\"13911111112\",\"delFlag\":\"0\",\"userId\":657}"
-check: {
-        "success": true
+        "code": "0",
        }
 
 ---
-name: modify_user_userinfo
-# 1.4 修改个人信息
-url: /admin/user/userInfo
-method: PUT
-payload: "{\"userId\":873,\"username\":\"test1\",\"password\":\"123456\",\"newpassword1\":\"\",\"newpassword2\":\"\",\"phone\":13911111111}"
+name: api_recharge
+# 充值(黄新)
+url: /openapi/biz/v2/apiRecharge
+method: post
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","bankCardNum":"","bankName":"","amount":""}}
 check: {
-        "success": true
+        "code": "0",
        }
 
 ---
-name: delete_user_by_userid
-# 1.5 删除用户
-url: /admin/user
-method: DELETE
+name: api_recharge_confirm
+# 充值确认(黄新)
+url: /openapi/biz/v2/apiRechargeConfirm
+method: post
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","reqSerial":"","validateCode":"123456","validateCodeSerialNum":""}}
 check: {
-        "success": true
+        "code": "0",
        }
 
 ---
-name: get_role_roleList
-# 1.6 根据部门获取角色列表
-url: /admin/role/roleList
-method: GET
+name: api_buy
+#  购买(黄新)
+url: /openapi/biz/v2/apiBuy
+method: post
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","prdIndexId":"1000000107","amount":"","tranBackAdd":"https://adv2.bicai365.com/h5openapibanks/203/#/buy","couponId":"","couponUsageRecordId":"","expandJson":""}}
 check: {
-        "success": true
+        "code": "0",
        }
 
 ---
-name: get_menu_allTree
-# 2.1 获取菜单树
-url: /admin/menu/allTree
-method: GET
+name: api_query_hold_info
+#  持有列表--(郝志阳)
+url: /openapi/bank/v2/apiQueryHoldInfo
+method: post
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","currentPage":1,"prdType":"4","depositTypeId":"2"}}
 check: {
-        "success": true
+        "code": "0",
        }
 
 ---
-name: get_menu_by_menuId
-# 2.2 获取查看菜单
-url: /admin/menu
-method: GET
+name: interest_calculatioin
+#  赎回利息试算(黄新)
+url: /openapi/biz/v2/interestCalculatioin
+method: post
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"BC-a03e021d5edb4e80bc256c1c94150583","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","amount":"","prdIndexId":"1000000107","reqSerial":""}}
 check: {
-        "success": true
+        "code": "0",
        }
 
 ---
-name: add_menu
-# 2.3 添加菜单
-url: /admin/menu
-method: POST
-payload: "{\"parentId\":21,\"name\":\"自动化测试\",\"permission\":\"auto_test\"}"
+name: api_redemption
+#  赎回(黄新)
+url: /openapi/biz/v2/apiRedemption
+method: post
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"BC-a03e021d5edb4e80bc256c1c94150583","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","amount":"","prdIndexId":"1000000107","reqSerial":""}}
 check: {
-        "success": true
+        "code": "0",
        }
 
 ---
-name: modify_menu
-# 2.4 修改菜单
-url: /admin/menu
-method: PUT
-payload: "{\"menuId\":249,\"name\":\"自动化测试123\",\"parentId\":21}"
+name: api_cash
+#  提现(黄新)
+url: /openapi/biz/v2/apiCash
+method: post
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"BC-f4e11928652b41eeb7be03dd0143539d","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","amount":"","withDrawType":1,"bankName":"","bankCardNum":""}}
 check: {
-        "success": true
-       }
-
----
-name: del_menu
-# 2.5 删除菜单
-url: /admin/menu
-method: DELETE
-check: {
-        "success": true
-       }
-
----
-name: get_role_rolePage
-# 3.1 获取角色列表
-url: /admin/role/rolePage
-method: GET
-check: {
-        "success": true
-       }
-
-
----
-name: add_role
-# 3.2 添加角色
-url: /admin/role
-#payload: "{\"roleName\":\"我的自动化测试\",\"roleCode\":\"auto_test\",\"roleDesc\":\"自动化测试用\",\"deptName\":\"比财\",\"roleDeptId\":1}"
-payload: "{\"roleName\":\"我的自动化测试\",\"roleCode\":\"auto_test\",\"roleDesc\":\"自动化测试用\",\"roleDeptId\":1}"
-method: POST
-check: {
-        "success": true
-       }
-
----
-name: modify_role
-# 3.3 修改角色
-url: /admin/role
-#payload: "{\"roleId\":54,\"roleName\":\"我的自动化测试111\",\"roleCode\":\"auto_test222\",\"roleDesc\":\"自动化测试用333\",\"updateTime\":\"2019-03-26 21:04:14\",\"delFlag\":\"0\",\"roleDeptId\":4,\"deptName\":\"研发中心\",\"index\":\"6\"}"
-payload: "{\"roleId\":54,\"roleName\":\"我的自动化测试111\",\"roleCode\":\"auto_test222\",\"roleDesc\":\"自动化测试用333\",\"delFlag\":\"0\",\"roleDeptId\":4,\"deptName\":\"研发中心\",\"index\":\"6\"}"
-method: PUT
-check: {
-        "success": true,
-        "role_name": "我的自动化测试111",
-        "role_code": "auto_test222",
-        "role_desc": "自动化测试用333",
-        "del_flag": '0'
-       }
-
----
-name: delete_role
-# 3.4 删除角色
-url: /admin/role
-method: DELETE
-check: {
-        "success": true,
-        "role_name": "我的自动化测试111",
-        "role_code": "auto_test222",
-        "role_desc": "自动化测试用333",
-        "del_flag": '1'
-       }
-
----
-name: get_role_tree
-# 3.5.1根据角色获取权限
-url: /admin/menu/roleTree
-method: GET
-check: {
-        "success": true,
-       }
-
----
-name: put_role_menu
-# 3.5.2 更新权限
-url: /admin/role/roleMenu
-method: PUT
-payload: {'roleId':"",'menuIds':"1,2,21,22,23,24,3,31,32,33,34,4,41,42,43,44,45,7,71,72,73,74"}
-check: {
-        "success": true,
-       }
-
----
-name: get_dept_tree
-# 4.1 获取部门树
-url: /admin/dept/tree
-method: GET
-check: {
-        "success": true,
-       }
-
----
-name: post_dept
-# 4.3 添加部门
-url: /admin/dept
-method: POST
-payload: "{\"parentId\":4,\"name\":\"自动化测试\",\"code\":\"auto_test\",\"orderNum\":\"1\"}"
-check: {
-        "success": true,
-        "code": "auto_test",
-        "del_flag":"0"
-       }
-
----
-name: put_dept
-# 4.4 修改部门信息
-url: /admin/dept
-method: PUT
-payload: "{\"parentId\":4,\"name\":\"自动化测试333\",\"orderNum\":\"1\",\"deptId\":70,\"delFlag\":\"0\",\"code\":\"auto_test222\"}"
-check: {
-        "success": true,
-        "code": "auto_test222",
-        "name": "自动化测试333",
-        "del_flag":"0"
-       }
-
----
-name: del_dept
-# 4.5 删除部门信息
-url: /admin/dept
-method: DELETE
-check: {
-        "success": true,
-        "code": "auto_test222",
-        "name": "自动化测试333",
-        "del_flag":"1"
-       }
-
----
-name: get_dict_page
-# 5.1 获取字典列表
-url: /admin/dict/dictPage
-method: GET
-check: {
-        "success": true,
-       }
-
----
-name: post_dict
-# 5.2 添加字典列表
-url: /admin/dict
-method: POST
-payload: "{\"type\":\"test_type\",\"value\":\"3\",\"label\":\"正常\",\"description\":\"测试正常\",\"sort\":1,\"remarks\":\"自动化测试123\"}"
-check: {
-        "success": true,
-        "type": "test_type",
-        "del_flag": "0"
-       }
-
----
-name: put_dict
-# 5.3 修改字典列表
-url: /admin/dict
-method: PUT
-payload: "{\"id\": \"\", \"type\": \"log_type\", \"value\": \"4\", \"label\": \"aad\", \"description\":\"自动化测试123\", \"sort\":1, \"delFlag\":0}"
-check: {
-        "success": true,
-        "type": "log_type",
-        "del_flag": "0",
-       }
-
----
-name: del_dict
-# 5.4 删除字典列表
-url: /admin/dict
-method: DELETE
-check: {
-        "success": true,
-        "del_flag": "1"
-       }
-
-
----
-name: get_dict_type
-# 0.获取数据字典信息
-url: /admin/dict/type
-method: GET
-check: {
-        "success":true
-       }
-
----
-name: post_member_select
-# 会员一.查询会员列表接口
-url: /member/manager/member/select
-payload: "{\"levelId\":\"\",\"pageSize\":10,\"pageNum\":1}"
-method: POST
-check: {
-        "success":true,
-        "status":"ENABLE"
-       }
-
----
-name: get_member_by_id
-# 会员二.查询会员详情接口
-url: /member/manager/member
-method: GET
-check: {
-        "success":true
-       }
-
----
-name: put_member_status
-# 会员三.变更会员状态  会员状态(ENABLE:启用 DISABLE:冻结)
-url: /member/manager/member/status
-payload: "{\"id\":\"\",\"status\":\"ENABLE\"}"
-method: PUT
-check: {
-        "success":true
-       }
-
----
-name: del_member_by_id
-# 会员四.删除会员标签(逻辑删除)
-url: /member/manager/member-label
-method: DELETE
-check: {
-        "success":true
-       }
-
----
-name: post_member_label
-# 会员五.单次给会员打标签
-url: /member/manager/member-label
-payload: "{\"memberId\":\"\",\"labelIds\":[99]}"
-method: POST
-check: {
-        "success":true
-       }
-
----
-name: post_member_batch
-# 会员六.批量给会员打标签
-url: /member/manager/member-label/batch
-payload: "{\"memberIds\":[1,2],\"labelIds\":[88]}"
-method: POST
-check: {
-        "success":true
-       }
-
----
-name: post_member_batch_level
-# 会员七.1.批量更新会员等级
-url: /member/manager/member/batch/level-status
-payload: "{\"type\":\"\",\"ids\":[1,2],\"levelId\":3}"
-method: PUT
-check: {
-        "success":true
-       }
-
----
-name: post_member_batch_status
-# 会员七.2.批量更新会员状态
-url: /member/manager/member/batch/level-status
-payload: "{\"type\":\"\",\"ids\":[1,2],\"status\":\"\"}"
-method: PUT
-check: {
-        "success":true
-       }
-
----
-name: post_manager_label
-# 标签一.创建标签信息
-url: /member/manager/label
-payload: "{\"name\":\"\"}"
-method: POST
-check: {
-        "success":true
-       }
-
----
-name: get_manager_label
-# 标签二.查询标签列表接口
-url: /member/manager/label
-method: GET
-check: {
-        "success":true
-       }
-
----
-name: get_manager_label_by_id
-# 标签三.查询标签详情
-url: /member/manager/label
-method: GET
-check: {
-        "success":true
-       }
-
----
-name: put_manager_label
-# 标签四.更新标签信息
-url: /member/manager/label
-payload: "{\"id\":\"\",\"name\":\"\"}"
-method: PUT
-check: {
-        "success":true
-       }
-
----
-name: del_manager_label_by_id
-# 标签五.删除标签信息(逻辑删除)
-url: /member/manager/label
-method: DELETE
-check: {
-        "success":false,"code":"OCCUPIED_ERROR","message":"已被使用,无法删除",
-        "success1":true
-       }
-
----
-name: put_manager_label_status
-# 标签六.变更标签状态
-url: /member/manager/label/status
-payload: "{\"id\":\"\",\"status\":\"\"}"
-method: PUT
-check: {
-        "success":true
-       }
-
----
-name: post_manager_level
-# 等级一.创建等级信息
-url: /member/manager/level
-method: POST
-payload: "{\"name\":\"\",\"icon\":\"test999.jpg\",\"growthStart\":12,\"growthEnd\":430,\"expireType\":\"LATERMONTH\",\"resetMonth\":6}"
-check: {
-        "success":true
-       }
-
----
-name: get_manager_level
-# 等级二.查询等级列表接口
-url: /member/manager/level
-method: GET
-check: {
-        "success":true
-       }
-
----
-name: get_manager_level_by_id
-# 等级三.查询等级详情接口根据id
-url: /member/manager/level
-method: GET
-check: {
-        "success":true
-       }
-
----
-name: put_manager_level
-# 等级四.更新等级信息
-url: /member/manager/level
-method: PUT
-payload: "{\"id\":\"\",\"name\":\"\",\"icon\":\"test111.jpg\",\"growthStart\":13,\"growthEnd\":420,\"expireType\":\"LATERMONTH\",\"resetMonth\":7}"
-check: {
-        "success":true
-       }
-
----
-name: add_member
-# 内部接口:会员通过电话号码登录获取会员相关信息
-url: /member/member/login
-method: GET
-check: {
-        "success":true
+        "code": "0",
        }
 
 

@@ -3,7 +3,7 @@
 # @Author  : XuChen
 # @File    : run.py
 
-from Common import email_module, log_module, Consts, Shell
+from Common import email_module, log_module, Consts, Shell, dd_module
 from Conf import Config
 import pytest
 if __name__ == '__main__':
@@ -19,8 +19,8 @@ if __name__ == '__main__':
     html_report_path = conf.html_report_path
 
     # 定义测试集
-    allure_list = '--allure_features=Admin_User'
-    args = ['-q', '--maxfail=1', '--alluredir', xml_report_path, allure_list]
+    allure_list = '--allure_features=jch'
+    args = ['-q', '--maxfail=5', '--alluredir', xml_report_path, allure_list]
     log.info('执行用例集为：%s' % allure_list)
     pytest.main(args)
     cmd = 'allure generate %s -o %s  --clean' % (xml_report_path,
@@ -44,6 +44,9 @@ if __name__ == '__main__':
     print("失败" + str(error_number) + "个测试用例")
     print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
 
+    if error_number == 0:
+        dingding = dd_module.SendDingDing()
+        dingding.sendDingDing()
     # try:
     #     mail = email_module.SendMail()
     #     mail.sendMail()

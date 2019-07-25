@@ -17,22 +17,62 @@ class AssertModule:
     def __init__(self):
         self.log = log_module.MyLog()
 
-    def assert_code(self, code, expected_code):
+    def assert_code(self, expected_code, code):
         """
         验证response状态码
         :param code:
         :param expected_code:
         :return:
         """
+
+        with allure.step("使用返回code做对比："):
+
+            with allure.step("预期状态码:" + str(expected_code)):
+                pass
+            with allure.step("实际状态码:" + str(code)):
+                pass
+
         try:
+
             assert code == expected_code
-            print("预期结果:" + str(expected_code))
-            print("实际结果:" + str(code))
+            print("预期状态码:" + str(expected_code))
+            print("实际状态码:" + str(code))
             return True
         except:
             self.log.error(
                 "statusCode error, expected_code is %s, statusCode is %s " %
                 (expected_code, code))
+            Consts.ASSERT_FAIL_LIST.append('fail')
+
+            raise
+
+    def assert_text(self, act_msg, expected_msg, remark=None):
+        """
+        验证response act_msg中是否等于预期字符串
+        :param act_msg:
+        :param expected_msg:
+        :return:
+        """
+        if remark is not None:
+            with allure.step("使用" + remark + "做对比:"):
+                with allure.step("预期结果:" + str(expected_msg)):
+                    pass
+                with allure.step("实际结果:" + str(act_msg)):
+                    pass
+        else:
+            with allure.step("预期结果:" + str(expected_msg)):
+                pass
+            with allure.step("实际结果:" + str(act_msg)):
+                pass
+        try:
+
+            assert act_msg == expected_msg
+            return True
+
+        except:
+            self.log.error(
+                "Response body != expected_msg, expected_msg is %s, body is %s"
+                % (expected_msg, body))
             Consts.ASSERT_FAIL_LIST.append('fail')
 
             raise
@@ -75,27 +115,6 @@ class AssertModule:
             self.log.error(
                 "Response body Does not contain expected_msg, expected_msg is %s"
                 % expected_msg)
-            Consts.ASSERT_FAIL_LIST.append('fail')
-
-            raise
-
-    def assert_text(self, body, expected_msg):
-        """
-        验证response body中是否等于预期字符串
-        :param body:
-        :param expected_msg:
-        :return:
-        """
-        try:
-            with allure.step("预期结果:" + str(expected_msg) + "与实际结果" +
-                             str(body) + "做对比"):
-                assert body == expected_msg
-                return True
-
-        except:
-            self.log.error(
-                "Response body != expected_msg, expected_msg is %s, body is %s"
-                % (expected_msg, body))
             Consts.ASSERT_FAIL_LIST.append('fail')
 
             raise

@@ -50,5 +50,13 @@ def exp_results(key_name):
         raise
 
 
+def get_payload(key_name):
+    payload = {
+        "head": get_value(key_name)['head'],
+        "param": get_value(key_name)['param']
+    }
+    return payload
+
+
 if __name__ == '__main__':
-    print(get_value('login'))
+    print(exp_results('query_login_status')['code'])
