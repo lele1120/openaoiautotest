@@ -15,12 +15,16 @@ class SendDingDing:
         ip = s.getsockname()[0]
         return 'http://' + ip + ':8080' + '/job/jch-api/allure/'
 
-    def sendDingDing(self):
+    def sendDingDing(self, case_num, success_num, error_num):
+
         url = 'https://oapi.dingtalk.com/robot/send?access_token=00eaa883c32dcc023a95b4ee84045659e2ddd8a8d5a98233cb0e2809d33c5f3d'
         program = {
             "msgtype": "text",
             "text": {
-                "content": "金城银行接口自动化运行结果:" + "\n" + str(self.get_report_url())
+                "content":
+                "金城银行接口自动化运行结果:" + "\n" + str(self.get_report_url()) + "\n" +
+                "运行测试用例:" + str(case_num) + "\n" + "成功:" + str(success_num) +
+                "\n" + "失败:" + str(error_num)
             },
         }
         headers = {'Content-Type': 'application/json'}
