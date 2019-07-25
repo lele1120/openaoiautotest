@@ -56,7 +56,7 @@ name: api_recharge_confirm
 # 充值确认(黄新)
 url: /openapi/biz/v2/apiRechargeConfirm
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","reqSerial":"","validateCode":"123456","validateCodeSerialNum":""}}
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","reqSerial":"","validateCode":"225588","validateCodeSerialNum":""}}
 check: {
         "code": "0",
        }

@@ -4,6 +4,8 @@
 # @File    : test_jch.py
 
 from __future__ import absolute_import
+
+import random
 from decimal import *
 import json
 import operator
@@ -171,6 +173,7 @@ def test_api_recharge_confirm_06():
             "api_recharge_confirm",
             token=login_token,
             reqSerial=reqSerial,
+            validateCode=str(random.randint(111111, 999999)),
             validateCodeSerialNum=validateCodeSerialNum)
     with pytest.allure.step("结果对比"):
         test.assert_code(
