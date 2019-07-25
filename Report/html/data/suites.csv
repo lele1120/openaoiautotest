@@ -1,66 +1,66 @@
 "Status","Name","Duration in ms","Description"
-"passed","TestCase.test_jch.test_api_query_hold_info_sh_13","3205","
-    持有列表-赎回后--(郝志阳)
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_query_bank_center_zq_14","3433","
-    支取后查询余额
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_query_bank_center_cz_07","3198","
-    充值后查询余额
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_query_bank_center_tx_16","3289","
-    提现后查询余额
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_cash_15","1989","
+"passed","TestCase.test_jch.test_api_cash_15","2829","
     提现(黄新)
     :return: 
     "
-"passed","TestCase.test_jch.test_api_redemption_12","822","
-    赎回(黄新)
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_query_org_bind_card_cz_04","1836","
-    机构绑卡列表查询
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_recharge_05","1094","
-    充值(黄新)
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_query_bank_center_02","1906","
-    资产首页余额查询
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_query_hold_info_10","2075","
-    持有列表--(郝志阳)
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_buy_08","1002","
-    购买(黄新)
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_recharge_confirm_06","1221","
-    充值确认(黄新)
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_query_bank_center_cr_09","6072","
-    存入后查询余额
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_trade_check_cz_03","117","
+"passed","TestCase.test_jch.test_api_trade_check_cz_03","106","
     交易通用校验-(黄新),10-充值
     :return: 
     "
-"passed","TestCase.test_jch.test_query_login_status_01","395","
+"passed","TestCase.test_jch.test_api_query_bank_center_cr_09","9537","
+    存入后查询余额
+    :return: 
+    "
+"passed","TestCase.test_jch.test_api_redemption_12","1832","
+    赎回(黄新)
+    :return: 
+    "
+"passed","TestCase.test_jch.test_api_query_hold_info_10","3631","
+    持有列表--(郝志阳)
+    :return: 
+    "
+"passed","TestCase.test_jch.test_api_query_bank_center_tx_16","8582","
+    提现后查询余额
+    :return: 
+    "
+"passed","TestCase.test_jch.test_api_query_bank_center_zq_14","5740","
+    支取后查询余额
+    :return: 
+    "
+"passed","TestCase.test_jch.test_api_recharge_05","3718","
+    充值(黄新)
+    :return: 
+    "
+"passed","TestCase.test_jch.test_query_login_status_01","703","
     用户开户状态查询
     :param login: 预制登录信息 获取授权token:
     :return:
     "
-"passed","TestCase.test_jch.test_interest_calculatioin_11","413","
+"passed","TestCase.test_jch.test_interest_calculatioin_11","754","
     赎回利息试算(黄新)
+    :return: 
+    "
+"passed","TestCase.test_jch.test_api_query_hold_info_sh_13","5346","
+    持有列表-赎回后--(郝志阳)
+    :return: 
+    "
+"passed","TestCase.test_jch.test_api_buy_08","1919","
+    购买(黄新)
+    :return: 
+    "
+"passed","TestCase.test_jch.test_api_query_bank_center_02","4948","
+    资产首页余额查询
+    :return: 
+    "
+"passed","TestCase.test_jch.test_api_query_bank_center_cz_07","7081","
+    充值后查询余额
+    :return: 
+    "
+"passed","TestCase.test_jch.test_api_query_org_bind_card_cz_04","3694","
+    机构绑卡列表查询
+    :return: 
+    "
+"passed","TestCase.test_jch.test_api_recharge_confirm_06","4089","
+    充值确认(黄新)
     :return: 
     "

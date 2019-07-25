@@ -59,3 +59,12 @@
 [ERROR 2019-07-17 15:20:21]statusCode error, expected_code is 0, statusCode is 1 
 [ERROR 2019-07-17 16:01:31]statusCode error, expected_code is 0, statusCode is 9999 
 [ERROR 2019-07-17 16:01:36]statusCode error, expected_code is 0, statusCode is 9999 
+[ERROR 2019-07-19 14:10:09]statusCode error, expected_code is 0, statusCode is E0035 
+[ERROR 2019-07-19 14:10:09]statusCode error, expected_code is 0, statusCode is E0035 
+[ERROR 2019-07-19 14:10:13]statusCode error, expected_code is 0, statusCode is E0035 
+[ERROR 2019-07-19 14:10:50]statusCode error, expected_code is 0, statusCode is E0035 
+[ERROR 2019-07-19 14:10:50]statusCode error, expected_code is 0, statusCode is E0035 
+[ERROR 2019-07-19 14:10:53]statusCode error, expected_code is 0, statusCode is E0035 
+[ERROR 2019-07-19 14:12:57]statusCode error, expected_code is 0, statusCode is E0035 
+[ERROR 2019-07-19 14:12:58]statusCode error, expected_code is 0, statusCode is E0035 
+[ERROR 2019-07-19 14:13:01]statusCode error, expected_code is 0, statusCode is E0035 
