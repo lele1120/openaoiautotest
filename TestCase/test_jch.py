@@ -27,6 +27,8 @@ req = request_module.RequestModule()
 mysql_opt = mysql_module.MySqlModule()
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 Consts.MYSQL_ENVIRONMENT = 'bicai_admin'
+global login_token
+login_token = req.get_token(13911645993)
 
 
 @allure.feature('jch', "用户开户状态查询（温旭雲）")
@@ -37,8 +39,7 @@ def test_query_login_status_01():
     :param login: 预制登录信息 获取授权token:
     :return:
     """
-    global login_token
-    login_token = req.get_token(13911645993)
+
     # login_token = 'BC-a62ce02bb89946e9b6638c3a0ab74ca7'
 
     with pytest.allure.step("用户开户状态查询"):
@@ -479,3 +480,30 @@ def test_api_query_bank_center_tx_16():
                      Decimal(totalAsset_zq) - Decimal(tx_amount), "提现后总资产")
     test.assert_text(Decimal(hold_amount_zq), Decimal(hold_amount_tx), "提现后持有")
     Consts.RESULT_LIST.append('True')
+
+
+@allure.feature('jch', "页面底部机构logo及热线")
+@allure.severity('blocker')
+def test_api_orghotline_servertime_17():
+    """
+    页面底部机构logo及热线
+    :return: 
+    """
+    with pytest.allure.step("页面底部机构logo及热线"):
+        response_dicts = req.api_request("api_orghotline_servertime",
+                                         token=login_token)
+    with pytest.allure.step("结果对比"):
+        test.assert_code(
+            exp_results("api_cash")['code'], response_dicts['code'])
+        test.assert_text(
+            exp_results("api_orghotline_servertime")['custServiceTime'],
+            response_dicts['data']['custServiceTime'])
+        test.assert_text(
+            exp_results("api_orghotline_servertime")['orgName'],
+            response_dicts['data']['orgName'])
+        test.assert_text(
+            exp_results("api_orghotline_servertime")['orgLogo'],
+            response_dicts['data']['orgLogo'])
+        test.assert_text(
+            exp_results("api_orghotline_servertime")['custServiceHotLine'],
+            response_dicts['data']['custServiceHotLine'][0])

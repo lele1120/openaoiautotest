@@ -17,7 +17,7 @@ class AssertModule:
     def __init__(self):
         self.log = log_module.MyLog()
 
-    def assert_code(self, expected_code, code):
+    def assert_code(self, code, expected_code):
         """
         验证response状态码
         :param code:
