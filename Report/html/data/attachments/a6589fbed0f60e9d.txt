@@ -1,0 +1,10 @@
+log_module.py               74 INFO     [INFO 2019-07-25 11:27:43]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+log_module.py               74 INFO     [INFO 2019-07-25 11:27:43]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+connectionpool.py          205 DEBUG    Starting new HTTP connection (1): gateway.bicai365.com:80
+connectionpool.py          393 DEBUG    http://gateway.bicai365.com:80 "POST /auth/oauth/token HTTP/1.1" 200 None
+log_module.py               74 INFO     [INFO 2019-07-25 11:27:44]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+connectionpool.py          205 DEBUG    Starting new HTTP connection (1): gateway.bicai365.com:80
+connectionpool.py          393 DEBUG    http://gateway.bicai365.com:80 "POST /auth/oauth/token HTTP/1.1" 200 None
+connectionpool.py          205 DEBUG    Starting new HTTP connection (1): gateway.bicai365.com:80
+connectionpool.py          393 DEBUG    http://gateway.bicai365.com:80 "GET /admin/user/info HTTP/1.1" 200 None
+log_module.py               74 INFO     [INFO 2019-07-25 11:27:46]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
