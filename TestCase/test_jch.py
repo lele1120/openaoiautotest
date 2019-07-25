@@ -497,14 +497,14 @@ def test_api_orghotline_servertime_17():
             exp_results("api_cash")['code'], response_dicts['code'])
         test.assert_text(
             exp_results("api_orghotline_servertime")['custServiceTime'],
-            response_dicts['data']['custServiceTime'])
+            response_dicts['data']['custServiceTime'], "营业时间")
         test.assert_text(
             exp_results("api_orghotline_servertime")['orgName'],
-            response_dicts['data']['orgName'])
+            response_dicts['data']['orgName'], "银行名称")
         test.assert_text(
             exp_results("api_orghotline_servertime")['orgLogo'],
-            response_dicts['data']['orgLogo'])
+            response_dicts['data']['orgLogo'], "logo图片地址")
         test.assert_text(
             exp_results("api_orghotline_servertime")['custServiceHotLine'],
-            response_dicts['data']['custServiceHotLine'][0])
+            response_dicts['data']['custServiceHotLine'][0], "热线电话")
         Consts.RESULT_LIST.append('True')
