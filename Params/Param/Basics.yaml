@@ -86,7 +86,7 @@ name: interest_calculatioin
 #  赎回利息试算(黄新)
 url: /openapi/biz/v2/interestCalculatioin
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"BC-a03e021d5edb4e80bc256c1c94150583","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","amount":"","prdIndexId":"1000000107","reqSerial":""}}
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","amount":"","prdIndexId":"1000000107","reqSerial":""}}
 check: {
         "code": "0",
        }
@@ -96,7 +96,7 @@ name: api_redemption
 #  赎回(黄新)
 url: /openapi/biz/v2/apiRedemption
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"BC-a03e021d5edb4e80bc256c1c94150583","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","amount":"","prdIndexId":"1000000107","reqSerial":""}}
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","amount":"","prdIndexId":"1000000107","reqSerial":""}}
 check: {
         "code": "0",
        }
@@ -106,9 +106,24 @@ name: api_cash
 #  提现(黄新)
 url: /openapi/biz/v2/apiCash
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"BC-f4e11928652b41eeb7be03dd0143539d","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","amount":"","withDrawType":1,"bankName":"","bankCardNum":""}}
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","amount":"","withDrawType":1,"bankName":"","bankCardNum":""}}
 check: {
         "code": "0",
+       }
+
+
+---
+name: api_orghotline_servertime
+#  提现(黄新)
+url: /openapi/comm/v2/apiOrgHotLineAndServerTime
+method: post
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203"}}
+check: {
+        "code": "0",
+        "custServiceHotLine":"400-616-1888",
+        "custServiceTime": "周一至周五9:00-12:00 13:30:17:30",
+        "orgName": "金城银行",
+        "orgLogo": "open_api_bank/admin/org/message/203/1562316028848bankLogo.jpg"
        }
 
 
