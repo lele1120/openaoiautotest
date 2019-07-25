@@ -20,7 +20,7 @@ class SendDingDing:
         program = {
             "msgtype": "text",
             "text": {
-                "content": "金城银行接口自动化运行结果" + "\n" + str(self.get_report_url())
+                "content": "金城银行接口自动化运行结果:" + "\n" + str(self.get_report_url())
             },
         }
         headers = {'Content-Type': 'application/json'}
