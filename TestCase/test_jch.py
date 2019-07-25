@@ -507,3 +507,4 @@ def test_api_orghotline_servertime_17():
         test.assert_text(
             exp_results("api_orghotline_servertime")['custServiceHotLine'],
             response_dicts['data']['custServiceHotLine'][0])
+        Consts.RESULT_LIST.append('True')
