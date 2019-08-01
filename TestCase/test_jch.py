@@ -174,7 +174,8 @@ def test_api_recharge_confirm_06():
             "api_recharge_confirm",
             token=login_token,
             reqSerial=reqSerial,
-            validateCode=str(random.randint(111111, 999999)),
+            # validateCode=str(random.randint(111111, 999999)),
+            validateCode="123456",
             validateCodeSerialNum=validateCodeSerialNum)
     with pytest.allure.step("结果对比"):
         test.assert_code(
