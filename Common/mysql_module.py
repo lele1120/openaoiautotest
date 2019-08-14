@@ -104,23 +104,5 @@ class MySqlModule:
 
 
 if __name__ == '__main__':
-    # print(MySqlModule().data_read(" select * from sys_user")[0])
-    # MySqlModule().data_write("INSERT INTO sys_user VALUES ( 0, 'xiaocccb', '{bcrypt}$2a$10$XQgkulIVN0UdDRQXGNISfOBQmxwBBv.XQ75Fq8NPVmBePYIbqxu4W', NULL, '173992642333', NULL, 3, '2018-08-06 14:44:42', '2018-12-29 10:18:09', '0' );")cccb', '{bcrypt}$2a$10$XQgkulIVN0UdDRQXGNISfOBQmxwBBv.XQ75Fq8NPVmBePYIbqxu4W', NULL, '173992642333', NULL, 3, '2018-08-06 14:44:42', '2018-12-29 10:18:09', '0' );")
-    # MySqlModule().data_write("DELETE FROM sys_user WHERE username = 'xiaobbbb';")
-    # username = ["xiaohuang", "xiaohong", "xiaolv", "xiaozi", "xiaohei", "xiaobai", "xiaocheng"]
-    # phone_num = ["13922290999", "13933390999", "13944490999", "13955590999", "13966690999", "13977790999", "13988890999"]
-    # for i in range(username.__len__()):
-    #     sql_insert = "INSERT INTO sys_user VALUES ( 0, '%s', '{bcrypt}$2a$10$XQgkulIVN0UdDRQXGNISfOBQmxwBBv.XQ75Fq8NPVmBePYIbqxu4W', NULL, '%s', NULL, 3, '2018-08-06 14:44:42', '2018-12-29 10:18:09', '0' )"%(str(username[i]), str(phone_num[i]))
-    #     MySqlModule().data_write(sql_insert)
-    #
-    # for i in range(username.__len__()):
-    #     sql_insert = "DELETE FROM sys_user WHERE username = '%s' ;" % username[i]
-    #     MySqlModule().data_write(sql_insert)
-    list_aa = MySqlModule().data_read_all(
-        "SELECT * FROM sys_role_menu WHERE role_id = '1'", 'bicai_admin')
-    # list_bb = []
-    # for i in range(0, list_aa.__len__()):
-    #     list_bb.append(list_aa[i][0])
-    # list_cc = [x[0] for x in list_aa]
-    print(list_aa)
-    # print(MySqlModule().data_read("SELECT menu_id FROM sys_role_menu WHERE role_id = '1'"))
+    print(MySqlModule().data_read_all("SELECT * FROM a_id_card_auth WHERE ID_NAME = '许晨'", 'bicai_member_id_auth_test4_enc'))
+

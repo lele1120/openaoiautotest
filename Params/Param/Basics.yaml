@@ -1,114 +1,15 @@
 
 ---
-name: query_login_status
-# 用户开户状态查询（温旭雲）
-url: /openapi/account/v2/queryLoginStatus
+name: real_name_status
+#  查询认证信息
+url: /openapi/auth/v2.0/user/authInfo
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203"}}
+payload: {"head":{"userChannel":9,"appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"","systemType":"h5","token":"","version":"","channelType":"2"},"param":{"orgId":""}}
 check: {
         "code": "0",
-        "hasLogin":"0",
-        "hasOpenBank":"1"
-       }
-
----
-name: api_query_bank_center
-# 资产首页--(郝志阳)
-url: /openapi/bank/v2/apiQueryBankCenter
-method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203"}}
-check: {
-        "code": "0",
-       }
-
----
-name: api_trade_check
-# 交易通用校验(黄新)
-url: /openapi/biz/v2/apiTradeCheck
-method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","tradeType":}}
-check: {
-        "code": "0",
-       }
-
----
-name: api_query_org_bind_card
-# 机构绑卡列表查询
-url: /openapi/comm/v2/apiQueryOrgBindCard
-method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","bizType":"3","queryType":"0","transAmt":""}}
-check: {
-        "code": "0",
-       }
-
----
-name: api_recharge
-# 充值(黄新)
-url: /openapi/biz/v2/apiRecharge
-method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","bankCardNum":"","bankName":"","amount":""}}
-check: {
-        "code": "0",
-       }
-
----
-name: api_recharge_confirm
-# 充值确认(黄新)
-url: /openapi/biz/v2/apiRechargeConfirm
-method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","reqSerial":"","validateCode":"123456","validateCodeSerialNum":""}}
-check: {
-        "code": "0",
-       }
-
----
-name: api_buy
-#  购买(黄新)
-url: /openapi/biz/v2/apiBuy
-method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","prdIndexId":"1000000107","amount":"","tranBackAdd":"https://adv2.bicai365.com/h5openapibanks/203/#/buy","couponId":"","couponUsageRecordId":"","expandJson":""}}
-check: {
-        "code": "0",
-       }
-
----
-name: api_query_hold_info
-#  持有列表--(郝志阳)
-url: /openapi/bank/v2/apiQueryHoldInfo
-method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","currentPage":1,"prdType":"4","depositTypeId":"2"}}
-check: {
-        "code": "0",
-       }
-
----
-name: interest_calculatioin
-#  赎回利息试算(黄新)
-url: /openapi/biz/v2/interestCalculatioin
-method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"BC-a03e021d5edb4e80bc256c1c94150583","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","amount":"","prdIndexId":"1000000107","reqSerial":""}}
-check: {
-        "code": "0",
-       }
-
----
-name: api_redemption
-#  赎回(黄新)
-url: /openapi/biz/v2/apiRedemption
-method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"BC-a03e021d5edb4e80bc256c1c94150583","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","amount":"","prdIndexId":"1000000107","reqSerial":""}}
-check: {
-        "code": "0",
-       }
-
----
-name: api_cash
-#  提现(黄新)
-url: /openapi/biz/v2/apiCash
-method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"203","systemType":"h5","token":"BC-f4e11928652b41eeb7be03dd0143539d","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"203","amount":"","withDrawType":1,"bankName":"","bankCardNum":""}}
-check: {
-        "code": "0",
+        "memberAuthComplete": true,
+        "idCardAuthComplete": true,
+        "userVerifyFlag": "1"
        }
 
 
