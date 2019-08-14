@@ -44,12 +44,10 @@ if __name__ == '__main__':
     print("失败" + str(error_number) + "个测试用例")
     print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
 
-    if error_number == 0:
+    try:
         dingding = dd_module.SendDingDing()
-        dingding.sendDingDing()
-    # try:
-    #     mail = email_module.SendMail()
-    #     mail.sendMail()
-    # except:
-    #     log.error('发送邮件失败，请检查邮件配置')
-    #     raise
+        dingding.sendDingDing(test_body.__len__(), result_body.__len__(),
+                              error_number)
+    except:
+        log.error('发送钉钉失败，请检查钉钉配置')
+        raise
