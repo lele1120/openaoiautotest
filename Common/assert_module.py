@@ -46,7 +46,7 @@ class AssertModule:
 
             raise
 
-    def assert_text(self, act_msg, expected_msg, remark=None):
+    def assert_text(self, expected_msg, act_msg, remark=None):
         """
         验证response act_msg中是否等于预期字符串
         :param act_msg:
@@ -66,7 +66,7 @@ class AssertModule:
                 pass
         try:
 
-            assert act_msg == expected_msg
+            assert expected_msg == act_msg
             return True
 
         except:
