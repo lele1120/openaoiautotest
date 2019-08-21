@@ -9,6 +9,8 @@
 import json
 import os
 import random
+
+import pytest
 import requests
 import Common.Consts
 from Common import env_module, Consts
@@ -33,14 +35,19 @@ class RequestModule:
         login_url = ''
         if path[22:27] == 'test1':
             login_url = 'https://app-test1.bicai365.com'  # ytest 环境
+            pytest.allure.environment(environment='test1')
         elif path[22:27] == 'test2':
             login_url = 'https://app-test2.bicai365.com'  # adv
+            pytest.allure.environment(environment='test2')
         elif path[22:27] == 'test3':
             login_url = 'https://app-test3.bicai365.com'  # adv1
+            pytest.allure.environment(environment='test3')
         elif path[22:27] == 'test4':
             login_url = 'https://app-test4.bicai365.com'  # adv2
+            pytest.allure.environment(environment='test4')
         elif path[22:27] == 'test5':
             login_url = 'https://app-test5.bicai365.com'  # adv3
+            pytest.allure.environment(environment='test5')
         return login_url
 
     def get_token(self, phone_number):
