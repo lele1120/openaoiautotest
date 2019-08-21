@@ -51,7 +51,7 @@ name: real_name_verify
 #  身份证,银行卡实名认证
 url: /openapi/auth/v2.0/user/realNameVerify
 method: post
-payload: {"head":{"userChannel":9,"appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"","systemType":"h5","token":"","version":"","channelType":"2"},"param":{"orgId":"","mobile":"13911645993","frontSessionId":"490419187690831876","updateFlag":true,"idName":"许晨","idNumber":"","bankCardNo":"6226900717048751"}}
+payload: {"head":{"userChannel":9,"appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"","systemType":"h5","token":"","version":"","channelType":"2"},"param":{"orgId":"","mobile":"13911645993","frontSessionId":"490419187690831876","updateFlag":true,"idName":"许晨","idNumber":"","bankCardNo":"6226900717048751","address": "北京市东城区安定门内大街136号"}}
 check: {
         "code": "0",
         "msg": "SUCCESS",
