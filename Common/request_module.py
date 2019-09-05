@@ -99,6 +99,13 @@ class RequestModule:
         return login_act_result.json()['head']['TOKEN']
 
     def api_request(self, key_name, data=None, **kwargs):
+        """
+
+        :param key_name:请求的接口名称
+        :param data:替换的payload
+        :param kwargs:上送可变动参数
+        :return:
+        """
         self.data = get_value(key_name)
         self.url = self.get_evn_url + self.data['url']
         headers = {
@@ -119,8 +126,13 @@ class RequestModule:
         response_dicts = requests.post(url=self.url,
                                        data=json.dumps(self.data['payload']),
                                        headers=headers)
+        time_consuming = response_dicts.elapsed.microseconds / 1000  # 接口耗时单位毫秒
+        time_total = response_dicts.elapsed.total_seconds()  # 接口耗时单位秒
 
+        with allure.step("time:\r" + str(time_total) + "s"):
+            pass
         with allure.step("url:\r" + self.url):
+            # 测试报告展示内容
             pass
         with allure.step("method:\r" + self.data['method']):
             pass
