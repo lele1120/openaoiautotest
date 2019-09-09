@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2019/7/15 9:37 AM
 # @Author  : XuChen
-# @File    : test_jch.py
+# @File    : test_bhns.py
 
 from __future__ import absolute_import
 from decimal import *
@@ -27,11 +27,11 @@ sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 Consts.MYSQL_ENVIRONMENT = 'bicai_admin'
 
 
-@allure.feature('jch', "用户开户状态查询（温旭雲）")
+@allure.feature('bhns', "登录状态查询接口-liming")
 @allure.severity('blocker')
 def test_query_login_status_01():
     """
-    用户开户状态查询
+    用户开户状态查询接口-liming
     :param login: 预制登录信息 获取授权token:
     :return:
     """
@@ -54,14 +54,14 @@ def test_query_login_status_01():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('jch', "资产首页--(郝志阳)")
+@allure.feature('bhns', "查询资产首页总数据（qxx）")
 @allure.severity('blocker')
 def test_api_query_bank_center_02():
     """
-    资产首页余额查询
+    查询资产首页总数据（qxx）
     :return: 
     """
-    with pytest.allure.step("资产首页--(郝志阳)"):
+    with pytest.allure.step("查询资产首页总数据（qxx）"):
         response_dicts = req.api_request("api_query_bank_center",
                                          token=login_token)
     with pytest.allure.step("结果对比"):
@@ -88,14 +88,14 @@ def test_api_query_bank_center_02():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('jch', "交易通用校验(黄新)-充值")
+@allure.feature('bhns', "交易通用校验（qxx）,tradeType=10")
 @allure.severity('blocker')
 def test_api_trade_check_cz_03():
     """
-    交易通用校验-(黄新),10-充值
+    交易通用校验（qxx）,tradeType=10
     :return: 
     """
-    with pytest.allure.step("交易通用校验-(黄新),10-充值"):
+    with pytest.allure.step("交易通用校验（qxx）,tradeType=10"):
         response_dicts = req.api_request("api_trade_check",
                                          token=login_token,
                                          tradeType=10)
@@ -105,16 +105,16 @@ def test_api_trade_check_cz_03():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('jch', "机构绑卡列表查询")
+@allure.feature('bhns', "查询机构绑卡信息-qxx")
 @allure.severity('blocker')
 def test_api_query_org_bind_card_cz_04():
     """
-    机构绑卡列表查询
+    查询机构绑卡信息-qxx
     :return: 
     """
     global bankName
     global bankCardNum
-    with pytest.allure.step("机构绑卡列表查询"):
+    with pytest.allure.step("查询机构绑卡信息-qxx"):
         response_dicts = req.api_request("api_query_org_bind_card",
                                          token=login_token)
     with pytest.allure.step("结果对比"):
@@ -125,33 +125,46 @@ def test_api_query_org_bind_card_cz_04():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('jch', "充值(黄新)")
+@allure.feature('bhns', "充值短信验证码-liming")
 @allure.severity('blocker')
-def test_api_recharge_05():
+def test_api_send_phoneCode_cz_05():
     """
-    充值(黄新)
+    充值短信验证码-liming
+    :return:
+    """
+    with pytest.allure.step("短信验证码-liming"):
+        response_dicts = req.api_request(
+            "api_send_phoneCode", token=login_token)
+    with pytest.allure.step("结果对比"):
+        global apiPackSeq,validateCodeSerialNum
+        apiPackSeq = response_dicts['data']['apiPackSeq']  # openapi流水号
+
+        validateCodeSerialNum = response_dicts['data']['validateCodeSerialNum']  # 短信验证码编号
+
+        test.assert_code(
+            exp_results("api_send_phoneCode")['code'],
+            response_dicts['code'])
+
+    Consts.RESULT_LIST.append('True')
+
+
+@allure.feature('bhns', "充值（qxx）")
+@allure.severity('blocker')
+def test_api_recharge_06():
+    """
+    充值（qxx）
     :return: 
     """
-    with pytest.allure.step("充值(黄新)"):
-        global cz_amount
+    with pytest.allure.step("充值（qxx）"):
+        global cz_amount, amount
         cz_amount = "2000.00"
         response_dicts = req.api_request("api_recharge",
                                          token=login_token,
                                          bankCardNum=bankCardNum,
                                          bankName=bankName,
-                                         amount=cz_amount)
-        global reqSerial, apiPackSeq, amount, validateCodeSerialNum
-
-        reqSerial = response_dicts['data']['reqSerial']  # 充值交易流水号
-
-        apiPackSeq = response_dicts['data']['apiPackSeq']  # 比财报文参考号
-
-        amount = response_dicts['data']['amount']  # 金额
-
-        validateCodeSerialNum = response_dicts['data'][
-            'validateCodeSerialNum']  # 短信验证码ID
-
-        print(reqSerial, apiPackSeq, amount, validateCodeSerialNum)
+                                         amount=cz_amount,
+                                         bizType=3,
+                                         validateCodeSerialNum=validateCodeSerialNum)
 
     with pytest.allure.step("结果对比"):
         test.assert_code(
@@ -159,28 +172,7 @@ def test_api_recharge_05():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('jch', "充值确认(黄新)")
-@allure.severity('blocker')
-def test_api_recharge_confirm_06():
-    """
-    充值确认(黄新)
-    :return: 
-    """
-    with pytest.allure.step("充值确认(黄新)"):
-        response_dicts = req.api_request(
-            "api_recharge_confirm",
-            token=login_token,
-            reqSerial=reqSerial,
-            validateCodeSerialNum=validateCodeSerialNum)
-    with pytest.allure.step("结果对比"):
-        test.assert_code(
-            exp_results("api_recharge_confirm")['code'],
-            response_dicts['code'])
-        test.assert_text(cz_amount, response_dicts['data']['amount'], "充值金额")
-    Consts.RESULT_LIST.append('True')
-
-
-@allure.feature('jch', "充值后查询余额")
+@allure.feature('bhns', "充值后查询余额")
 @allure.severity('blocker')
 def test_api_query_bank_center_cz_07():
     """
@@ -218,18 +210,40 @@ def test_api_query_bank_center_cz_07():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('jch', "购买(黄新)")
+@allure.feature('bhns', "存入短信验证码-liming")
 @allure.severity('blocker')
-def test_api_buy_08():
+def test_api_send_phoneCode_cr_08():
     """
-    购买(黄新)
+    存入短信验证码-liming
+    :return:
+    """
+    with pytest.allure.step("存入短信验证码-liming"):
+        response_dicts = req.api_request(
+            "api_send_phoneCode", token=login_token, bizType=6)
+    with pytest.allure.step("结果对比"):
+        global validateCodeSerialNum_cr
+        validateCodeSerialNum_cr = response_dicts['data']['validateCodeSerialNum']  # 存入短信验证码编号
+
+        test.assert_code(
+            exp_results("api_send_phoneCode")['code'],
+            response_dicts['code'])
+
+    Consts.RESULT_LIST.append('True')
+
+
+@allure.feature('bhns', "购买（qxx）")
+@allure.severity('blocker')
+def test_api_buy_09():
+    """
+    购买（qxx）
     :return: 
     """
     global amount_buy  # 购买金额
     amount_buy = "1001.00"
-    with pytest.allure.step("购买(黄新)"):
+    with pytest.allure.step("购买（qxx）"):
         response_dicts = req.api_request("api_buy",
                                          token=login_token,
+                                         validateCodeSerialNum=validateCodeSerialNum_cr,
                                          amount=amount_buy)
     with pytest.allure.step("结果对比"):
         test.assert_code(
@@ -243,9 +257,9 @@ def test_api_buy_08():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('jch', "存入后查询余额")
+@allure.feature('bhns', "存入后查询余额")
 @allure.severity('blocker')
-def test_api_query_bank_center_cr_09():
+def test_api_query_bank_center_cr_10():
     """
     存入后查询余额
     :return: 
@@ -282,14 +296,14 @@ def test_api_query_bank_center_cr_09():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('jch', "持有列表--(郝志阳)")
+@allure.feature('bhns', "存入后查用户持有（qxx）")
 @allure.severity('blocker')
-def test_api_query_hold_info_10():
+def test_api_query_hold_info_11():
     """
-    持有列表--(郝志阳)
+    存入后查用户持有（qxx）
     :return: 
     """
-    with pytest.allure.step("持有列表--(郝志阳)"):
+    with pytest.allure.step("存入后查用户持有（qxx）"):
         response_dicts = req.api_request("api_query_hold_info",
                                          token=login_token)
     ret_list = {}
@@ -310,37 +324,40 @@ def test_api_query_hold_info_10():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('jch', "赎回利息试算(黄新)")
+@allure.feature('bhns', "支取短信验证码-liming")
 @allure.severity('blocker')
-def test_interest_calculatioin_11():
+def test_api_send_phoneCode_zq_12():
     """
-    赎回利息试算(黄新)
-    :return: 
+    支取短信验证码-liming
+    :return:
     """
-    with pytest.allure.step("赎回利息试算(黄新)"):
-        response_dicts = req.api_request("interest_calculatioin",
-                                         token=login_token,
-                                         amount=amount_buy,
-                                         reqSerial=reqSerial_cr)
+    with pytest.allure.step("支取短信验证码-liming"):
+        response_dicts = req.api_request(
+            "api_send_phoneCode", token=login_token, bizType=7, amount=amount_buy)
     with pytest.allure.step("结果对比"):
+        global validateCodeSerialNum_zq
+        validateCodeSerialNum_zq = response_dicts['data']['validateCodeSerialNum']  # 支取短信验证码编号
+
         test.assert_code(
-            exp_results("interest_calculatioin")['code'],
+            exp_results("api_send_phoneCode")['code'],
             response_dicts['code'])
+
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('jch', "赎回(黄新)")
+@allure.feature('bhns', "赎回（qxx）")
 @allure.severity('blocker')
-def test_api_redemption_12():
+def test_api_redemption_13():
     """
-    赎回(黄新)
+    赎回（qxx）
     :return: 
     """
-    with pytest.allure.step("赎回(黄新)"):
+    with pytest.allure.step("赎回（qxx）"):
         response_dicts = req.api_request("api_redemption",
                                          token=login_token,
                                          amount=amount_buy,
-                                         reqSerial=reqSerial_cr)
+                                         reqSerial=reqSerial_cr,
+                                         validateCodeSerialNum=validateCodeSerialNum_zq)
     with pytest.allure.step("结果对比"):
         test.assert_code(
             exp_results("api_redemption")['code'], response_dicts['code'])
@@ -349,15 +366,15 @@ def test_api_redemption_12():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('jch', "持有列表-赎回后--(郝志阳)")
+@allure.feature('bhns', "支取后查用户持有（qxx）")
 @allure.severity('blocker')
-def test_api_query_hold_info_sh_13():
+def test_api_query_hold_info_sh_14():
     """
-    持有列表-赎回后--(郝志阳)
+    支取后查用户持有（qxx）
     :return: 
     """
     time.sleep(2)
-    with pytest.allure.step("持有列表--(郝志阳)"):
+    with pytest.allure.step("赎回后查用户持有（qxx）"):
         response_dicts = req.api_request("api_query_hold_info",
                                          token=login_token)
     # ret_list = []
@@ -377,9 +394,9 @@ def test_api_query_hold_info_sh_13():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('jch', "支取后查询余额")
+@allure.feature('bhns', "支取后查询余额")
 @allure.severity('blocker')
-def test_api_query_bank_center_zq_14():
+def test_api_query_bank_center_zq_15():
     """
     支取后查询余额
     :return: 
@@ -415,21 +432,42 @@ def test_api_query_bank_center_zq_14():
                      Decimal(hold_amount_cr) - Decimal(amount_buy), "支取后持有")
     Consts.RESULT_LIST.append('True')
 
-
-@allure.feature('jch', "提现(黄新)")
+@allure.feature('bhns', "提现短信验证码-liming")
 @allure.severity('blocker')
-def test_api_cash_15():
+def test_api_send_phoneCode_tx_16():
     """
-    提现(黄新)
+    提现短信验证码-liming
+    :return:
+    """
+    with pytest.allure.step("提现短信验证码-liming"):
+        response_dicts = req.api_request(
+            "api_send_phoneCode", token=login_token, bizType=4, amount=cz_amount)
+    with pytest.allure.step("结果对比"):
+        global validateCodeSerialNum_tx
+        validateCodeSerialNum_tx = response_dicts['data']['validateCodeSerialNum']  # 提现短信验证码编号
+
+        test.assert_code(
+            exp_results("api_send_phoneCode")['code'],
+            response_dicts['code'])
+
+    Consts.RESULT_LIST.append('True')
+
+
+@allure.feature('bhns', "提现 (qxx)")
+@allure.severity('blocker')
+def test_api_cash_17():
+    """
+    提现 (qxx)
     :return: 
     """
-    with pytest.allure.step("提现(黄新)"):
+    with pytest.allure.step("提现 (qxx)"):
         global tx_amount
         tx_amount = "2000.00"
         response_dicts = req.api_request("api_cash",
                                          token=login_token,
                                          bankCardNum=bankCardNum,
                                          bankName=bankName,
+                                         validateCodeSerialNum=validateCodeSerialNum_tx,
                                          amount=tx_amount)
         with pytest.allure.step("结果对比"):
             test.assert_code(
@@ -439,9 +477,9 @@ def test_api_cash_15():
         Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('jch', "提现后查询余额")
+@allure.feature('bhns', "提现后查询余额")
 @allure.severity('blocker')
-def test_api_query_bank_center_tx_16():
+def test_api_query_bank_center_tx_18():
     """
     提现后查询余额
     :return: 

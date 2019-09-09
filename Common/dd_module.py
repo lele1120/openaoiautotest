@@ -2,6 +2,8 @@
 # @Time    : 2019/7/19 1:55 PM
 # @Author  : XuChen
 # @File    : dd_module.py
+import socket
+
 import requests
 import json
 
@@ -19,7 +21,7 @@ class SendDingDing:
         program = {
             "msgtype": "text",
             "text": {
-                "金城银行接口自动化运行结果:" + "\n" + str(self.get_report_url()) + "\n" +
+                "滨海农商银行接口自动化运行结果:" + "\n" + str(self.get_report_url()) + "\n" +
                 "运行测试用例:" + str(case_num) + "\n" + "成功:" + str(success_num) +
                 "\n" + "失败:" + str(error_num)
             },
