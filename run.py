@@ -46,8 +46,7 @@ if __name__ == '__main__':
 
     try:
         dingding = dd_module.SendDingDing()
-        dingding.sendDingDing(test_body.__len__(), result_body.__len__(),
-                              error_number)
+        dingding.sendDingDing(test_body.__len__(), result_body.__len__(), error_number)
     except:
         log.error('发送钉钉失败，请检查钉钉配置')
         raise

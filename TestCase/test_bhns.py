@@ -474,7 +474,7 @@ def test_api_cash_17():
                 exp_results("api_cash")['code'], response_dicts['code'])
             test.assert_text(response_dicts['data']['amount'], tx_amount,
                              "提现金额")
-        Consts.RESULT_LIST.append('True')
+    Consts.RESULT_LIST.append('True')
 
 
 @allure.feature('bhns', "提现后查询余额")
