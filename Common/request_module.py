@@ -112,7 +112,11 @@ class RequestModule:
         response_dicts = requests.post(url=self.url,
                                        data=json.dumps(self.data['payload']),
                                        headers=headers)
+        time_consuming = response_dicts.elapsed.microseconds / 1000  # 接口耗时单位毫秒
+        time_total = response_dicts.elapsed.total_seconds()  # 接口耗时单位秒
 
+        with allure.step("time:\r" + str(time_total) + "s"):
+            pass
         with allure.step("url:\r" + self.url):
             pass
         with allure.step("method:\r" + self.data['method']):
