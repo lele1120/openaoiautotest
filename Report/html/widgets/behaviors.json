@@ -1,41 +1,30 @@
 {
-  "total" : 17,
+  "total" : 8,
   "items" : [ {
-    "uid" : "28178444d947a4842c19b922650b63c3",
-    "name" : "jch",
+    "uid" : "a9837be23ef596b5d51b543d59057826",
+    "name" : "sm",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 16,
+      "passed" : 8,
       "unknown" : 0,
-      "total" : 16
+      "total" : 8
     }
   }, {
-    "uid" : "fdb8485858acb8aaafed028db2013501",
-    "name" : "用户开户状态查询（温旭雲）",
+    "uid" : "3dc5adffebb12b7e1a1f113bcb065fec",
+    "name" : "查询认证信息",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 2,
       "unknown" : 0,
-      "total" : 1
+      "total" : 2
     }
   }, {
-    "uid" : "b74bc9360f44a3f58f37aba4e4ac761a",
-    "name" : "资产首页--(郝志阳)",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "8f0b49a6e4093329476968efe05a2b8e",
-    "name" : "交易通用校验(黄新)-充值",
+    "uid" : "65a41f1626889a8ccd945e1b801c9280",
+    "name" : "查询认证信息_清除认证信息后",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -45,8 +34,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "5cfc5ae7ce63fd7813cbfc898e3a9d55",
-    "name" : "机构绑卡列表查询",
+    "uid" : "28c22b3009d8c630a253e20d35a3e121",
+    "name" : "身份证OCR(保存图片)",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -56,8 +45,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "2e570611ca833a16a30e1767f2f0901e",
-    "name" : "充值(黄新)",
+    "uid" : "6cfe28ad24da985aa32f90265924ed64",
+    "name" : "身份证,银行卡实名认证",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -67,8 +56,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "a0b8e321dd5355f228ed594cd3c03374",
-    "name" : "充值确认(黄新)",
+    "uid" : "921071eb48b6a95d37ccdce3e1d7a67b",
+    "name" : "查询认证信息未发短信验证码",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -78,8 +67,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "41a08d430312682f5885a25131d2599c",
-    "name" : "充值后查询余额",
+    "uid" : "9f0afdf77c3628866626c7a04c4ec637",
+    "name" : "短信验证码发送",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -89,19 +78,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "75db8668451cf06339335c9122da502d",
-    "name" : "购买(黄新)",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "6dca8c2fa44d2eb47fa072f9617e4dbc",
-    "name" : "存入后查询余额",
+    "uid" : "24592eec500e3ae60c970a9ecbb35324",
+    "name" : "短信验证码校验",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
