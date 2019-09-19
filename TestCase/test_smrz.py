@@ -109,7 +109,9 @@ def test_id_card_ocr_03():
 
     with pytest.allure.step("身份证OCR(保存图片)"):
         response_dicts = req.api_request("id_card_ocr", token=login_token)
+        # global front_session_id  # 身份证人像面Sessionid
         global id_number  # 身份证号
+        # front_session_id = response_dicts['data']['frontSessionId']
         id_number = response_dicts['data']['idNumber']
     with pytest.allure.step("结果对比"):
         test.assert_code(
@@ -120,6 +122,10 @@ def test_id_card_ocr_03():
         test.assert_text(
             exp_results("id_card_ocr")['validityPeriod'],
             response_dicts['data']['validityPeriod'], "证件有效期")
+        # test.assert_text(
+        #     exp_results("id_card_ocr")['validityPeriodExpired'],
+        #     response_dicts['data']['validityPeriodExpired'],
+        #     "证件是否过期(0证件未过期,1证件已过期)")
         test.assert_text(
             exp_results("id_card_ocr")['issuingAuthority'],
             response_dicts['data']['issuingAuthority'], "签发机关")
@@ -149,6 +155,7 @@ def test_real_name_verify_04():
     with pytest.allure.step("身份证,银行卡实名认证"):
         response_dicts = req.api_request("real_name_verify",
                                          token=login_token,
+                                         # frontSessionId=front_session_id,
                                          idNumber=id_number)
     with pytest.allure.step("结果对比"):
         test.assert_code(
