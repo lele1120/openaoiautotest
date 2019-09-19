@@ -15,8 +15,7 @@ class SendDingDing:
         return 'http://' + ip + ':8080' + '/job/实名认证自动化测试/allure/'
 
     def sendDingDing(self, case_num, success_num, error_num):
-        # url = 'https://oapi.dingtalk.com/robot/send?access_token=00eaa883c32dcc023a95b4ee84045659e2ddd8a8d5a98233cb0e2809d33c5f3d'
-        url = 'https://oapi.dingtalk.com/robot/send?access_token=148e499b4c569a472798fa84fab2437c81b9803a4edb0b5263bea340811c4ec1'
+        url = 'https://oapi.dingtalk.com/robot/send?access_token=3b573a9ed0156e6c4cae02b49a7ffe27be0f5e7d0c27bb96bd9edbca25e06fe1'
         program = {
             "msgtype": "text",
             "text": {
