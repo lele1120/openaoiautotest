@@ -1,22 +1,23 @@
 
 ---
 name: query_login_status
-# 登录状态查询接口-liming
+# 用户开户状态查询
 url: /openapi/account/v2/queryLoginStatus
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"254","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"254"}}
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308"}}
 check: {
         "code": "0",
         "hasLogin":"0",
-        "hasOpenBank":"1"
+        "hasOpenBank":"1",
+        "cardIdStatus": "0"
        }
 
 ---
 name: api_query_bank_center
-# 查询资产首页总数据（qxx）
+#  3.2 资产首页（任朝旭）
 url: /openapi/bank/v2/apiQueryBankCenter
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"254","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"254"}}
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308"}}
 check: {
         "code": "0",
        }
@@ -26,37 +27,37 @@ name: api_trade_check
 #  交易通用校验（qxx）
 url: /openapi/biz/v2/apiTradeCheck
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"254","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"254","tradeType":}}
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","systemType":"h5","token":"","version":"","channelType":"2"},"param":{"orgId":"308","tradeType":"10","prdIndexId":"1000001072"}}
 check: {
         "code": "0",
        }
 
 ---
 name: api_query_org_bind_card
-# 查询机构绑卡信息-qxx
+# 机构绑卡列表查询
 url: /openapi/comm/v2/apiQueryOrgBindCard
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"254","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"254","bizType":3,"queryType":"0","transAmt":null}}
+payload: {"head":{"userChannel":9,"appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"H5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308","bizType":3,"queryType":"0","transAmt":null}}
 check: {
         "code": "0",
        }
 
 ---
 name: api_send_phoneCode
-# 短信验证码-liming 0：开户 1:绑定手机号短信验证码 2:绑卡短信验证 3:充值短信验证 4：提现短信验证码 6：存入 7:支取 8：更多服务 9：解卡
+# 短信验证码 0：开户 1:绑定手机号短信验证码 2:绑卡短信验证 3:充值短信验证 4：提现短信验证码 6：存入 7:支取 8：更多服务 9：解卡
 url: /openapi/comm/v2/apiSendPhoneCode
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"254","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"254","bankCardPhone":"13911645993","status":0,"bizType":,"amount":100}}
+payload: {"head":{"userChannel":9,"appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"H5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308","bankCardPhone":"13911645993","status":0,"bizType":,"amount":}}
 check: {
         "code": "0",
        }
 
 ---
 name: api_recharge
-# 充值（qxx）
+# 充值
 url: /openapi/biz/v2/apiRecharge
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"254","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"254","bankCardNum":"","bankName":"","bankElecAccountNum":"6231099101000333677","amount":,"validateCode":"123456","validateCodeSerialNum":"","phoneNum":"13911645993"}}
+payload: {"head":{"userChannel":9,"appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"H5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308","bankCardNum":"","bankName":"","amount":,"validateCode":"","validateCodeSerialNum":"","phoneNum":"13911645993","bankSerialNum":"","bankElecAccountNum":"","bankCode":"302100011000"}}
 check: {
         "code": "0",
        }
@@ -64,10 +65,10 @@ check: {
 
 ---
 name: api_buy
-#   购买（qxx）
+#   购买定期产品
 url: /openapi/biz/v2/apiBuy
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"254","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"254","prdIndexId":"1000001038","amount":"","validateCode":"123456","validateCodeSerialNum":"","tranBackAdd":"https://app-test4.bicai365.com/h5openapibanks/254/#/buy","phoneNum":"13911645993","expandJson":"{\"amount\":\"\",\"couponId\":\"\",\"couponDetailId\":\"\",\"teamId\":\"\",\"investId\":\"\"}"}}
+payload: {"head":{"userChannel":9,"appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"H5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308","prdIndexId":"1000001072","amount":,"validateCode":"","validateCodeSerialNum":"","tranBackAdd":"https://app-test4.bicai365.com/h5openapibanks/308/#/buy","phoneNum":"13911645993","expandJson":"{\"amount\":\"\",\"BUY_PARAM_KEY\":\"\"}","bankSerialNum":"","bankElecAccountNum":"6213392100000666229"}}
 check: {
         "code": "0",
        }
@@ -77,7 +78,7 @@ name: api_query_hold_info
 #   查用户持有（qxx）
 url: /openapi/bank/v2/apiQueryHoldInfo
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"254","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"254","currentPage":1,"prdType":"4","depositTypeId":"4","reqType":0}}
+payload: {"head":{"userChannel":9,"appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"H5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308","currentPage":1,"prdType":"4","depositTypeId":"4","reqType":0}}
 check: {
         "code": "0",
        }
@@ -87,7 +88,7 @@ name: api_redemption
 #   赎回（qxx）
 url: /openapi/biz/v2/apiRedemption
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"254","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"254","bankElecAccountNum":"6231099101000333677","prdIndexId":"1000001038","reqSerial":"","amount":1001,"validateCode":"123456","validateCodeSerialNum":"","phoneNum":"13911645993"}}
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308","bankElecAccountNum":"6231099101000333677","prdIndexId":"1000001038","reqSerial":"","amount":1001,"validateCode":"123456","validateCodeSerialNum":"","phoneNum":"13911645993"}}
 check: {
         "code": "0",
        }
@@ -97,7 +98,7 @@ name: api_cash
 #  提现 (qxx)
 url: /openapi/biz/v2/apiCash
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"254","systemType":"h5","token":"BC-d11c09d5675a4cc8adb6992c5d1bbe5c","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"254","bankCardNum":"6222020200053207227","bankName":"","amount":,"validateCode":"123456","validateCodeSerialNum":"","withDrawType":1,"phoneNum":"13911645993"}}
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"h5","token":"BC-d11c09d5675a4cc8adb6992c5d1bbe5c","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308","bankCardNum":"6222020200053207227","bankName":"","amount":,"validateCode":"123456","validateCodeSerialNum":"","withDrawType":1,"phoneNum":"13911645993"}}
 check: {
         "code": "0",
        }
