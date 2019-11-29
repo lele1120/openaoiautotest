@@ -12,7 +12,7 @@ class SendDingDing:
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.connect(('8.8.8.8', 80))
         ip = s.getsockname()[0]
-        return 'http://' + ip + ':8080' + '/job/滨海农商/allure/'
+        return 'http://' + ip + ':8080' + '/job/新疆汇和/allure/'
 
     def sendDingDing(self, case_num, success_num, error_num):
         url = 'https://oapi.dingtalk.com/robot/send?access_token=148e499b4c569a472798fa84fab2437c81b9803a4edb0b5263bea340811c4ec1'
@@ -20,7 +20,7 @@ class SendDingDing:
             "msgtype": "text",
             "text": {
                 "content":
-                "滨海农商接口自动化运行结果:" + "\n" + str(self.get_report_url()) + "\n" +
+                "新疆汇和接口自动化运行结果:" + "\n" + str(self.get_report_url()) + "\n" +
                 "运行测试用例:" + str(case_num) + "\n" + "成功:" + str(success_num) +
                 "\n" + "失败:" + str(error_num)
             },
