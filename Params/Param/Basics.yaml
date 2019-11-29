@@ -47,7 +47,7 @@ name: api_send_phoneCode
 # 短信验证码 0：开户 1:绑定手机号短信验证码 2:绑卡短信验证 3:充值短信验证 4：提现短信验证码 6：存入 7:支取 8：更多服务 9：解卡
 url: /openapi/comm/v2/apiSendPhoneCode
 method: post
-payload: {"head":{"userChannel":9,"appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"H5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308","bankCardPhone":"13911645993","status":0,"bizType":,"amount":}}
+payload: {"head":{"userChannel":9,"appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"H5","token":"BC-c5e1654b9c9349d4bb5a41852d974a2a","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308","bankCardPhone":"13911645993","status":0,"bizType":,"amount":,"bankCardNum":"6214831018738986","prdIndexId":"1000001072"}}
 check: {
         "code": "0",
        }
@@ -88,7 +88,7 @@ name: api_redemption
 #   赎回（qxx）
 url: /openapi/biz/v2/apiRedemption
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308","bankElecAccountNum":"6231099101000333677","prdIndexId":"1000001038","reqSerial":"","amount":1001,"validateCode":"123456","validateCodeSerialNum":"","phoneNum":"13911645993"}}
+payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"h5","token":"","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308","bankElecAccountNum":"6213392100000666971","prdIndexId":"1000001072","reqSerial":"","amount":1001,"validateCode":"123456","validateCodeSerialNum":"","phoneNum":"13911645993"}}
 check: {
         "code": "0",
        }
@@ -98,7 +98,7 @@ name: api_cash
 #  提现 (qxx)
 url: /openapi/biz/v2/apiCash
 method: post
-payload: {"head":{"userChannel":"9","appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"h5","token":"BC-d11c09d5675a4cc8adb6992c5d1bbe5c","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308","bankCardNum":"6222020200053207227","bankName":"","amount":,"validateCode":"123456","validateCodeSerialNum":"","withDrawType":1,"phoneNum":"13911645993"}}
+payload: {"head":{"userChannel":9,"appFlag":"BC","channel":"","channelId":"9","clientId":"30","deviceId":"H5","deviceName":"","orgId":"308","systemType":"H5","token":"BC-7d4de3673c084e4284bc5db91e92ade9","version":"","channelType":"2","tempApiOpen":0},"param":{"orgId":"308","bankCardNum":"6214831018738986","bankName":"招商银行","amount":2000,"validateCode":"123456","validateCodeSerialNum":"eacee1e2eff4bdf7a919d793ed915338","withDrawType":1,"phoneNum":"13911645993","bankSerialNum":"","bankElecAccountNum":"110101198606012510","bankCode":"308584000013"}}
 check: {
         "code": "0",
        }

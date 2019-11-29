@@ -328,11 +328,11 @@ def test_api_query_hold_info_11():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('bhns', "支取短信验证码-liming")
+@allure.feature('xjhh', "支取短信验证码-liming")
 @allure.severity('blocker')
 def test_api_send_phoneCode_zq_12():
     """
-    支取短信验证码-liming
+    支取短信验证码
     :return:
     """
     with pytest.allure.step("支取短信验证码-liming"):
@@ -349,7 +349,7 @@ def test_api_send_phoneCode_zq_12():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('bhns', "赎回（qxx）")
+@allure.feature('xjhh', "赎回（qxx）")
 @allure.severity('blocker')
 def test_api_redemption_13():
     """
@@ -370,7 +370,7 @@ def test_api_redemption_13():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('bhns', "支取后查用户持有（qxx）")
+@allure.feature('xjhh', "支取后查用户持有（qxx）")
 @allure.severity('blocker')
 def test_api_query_hold_info_sh_14():
     """
@@ -398,7 +398,7 @@ def test_api_query_hold_info_sh_14():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('bhns', "支取后查询余额")
+@allure.feature('xjhh', "支取后查询余额")
 @allure.severity('blocker')
 def test_api_query_bank_center_zq_15():
     """
@@ -436,7 +436,8 @@ def test_api_query_bank_center_zq_15():
                      Decimal(hold_amount_cr) - Decimal(amount_buy), "支取后持有")
     Consts.RESULT_LIST.append('True')
 
-@allure.feature('bhns', "提现短信验证码-liming")
+
+@allure.feature('xjhh', "提现短信验证码-liming")
 @allure.severity('blocker')
 def test_api_send_phoneCode_tx_16():
     """
@@ -449,7 +450,6 @@ def test_api_send_phoneCode_tx_16():
     with pytest.allure.step("结果对比"):
         global validateCodeSerialNum_tx
         validateCodeSerialNum_tx = response_dicts['data']['validateCodeSerialNum']  # 提现短信验证码编号
-
         test.assert_code(
             exp_results("api_send_phoneCode")['code'],
             response_dicts['code'])
@@ -457,7 +457,7 @@ def test_api_send_phoneCode_tx_16():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('bhns', "提现 (qxx)")
+@allure.feature('xjhh', "提现 (qxx)")
 @allure.severity('blocker')
 def test_api_cash_17():
     """
@@ -481,7 +481,7 @@ def test_api_cash_17():
     Consts.RESULT_LIST.append('True')
 
 
-@allure.feature('bhns', "提现后查询余额")
+@allure.feature('xjhh', "提现后查询余额")
 @allure.severity('blocker')
 def test_api_query_bank_center_tx_18():
     """
