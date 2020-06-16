@@ -1,161 +1,61 @@
 [ {
-  "uid" : "6e02dc3279c84c0e",
-  "name" : "test_jch.test_api_query_bank_center_zq_14",
+  "uid" : "5aeac5f2ed38793e",
+  "name" : "test_xjhh.test_query_login_status_01",
   "time" : {
-    "start" : 1563933049175,
-    "stop" : 1563933054915,
-    "duration" : 5740
+    "start" : 1578364376236,
+    "stop" : 1578364376822,
+    "duration" : 586
+  },
+  "status" : "failed",
+  "severity" : "blocker"
+}, {
+  "uid" : "ecfbc9d2e0733369",
+  "name" : "test_xjhh.test_api_query_bank_center_02",
+  "time" : {
+    "start" : 1578364376827,
+    "stop" : 1578364377333,
+    "duration" : 506
+  },
+  "status" : "failed",
+  "severity" : "blocker"
+}, {
+  "uid" : "a1940ed1c808d0a2",
+  "name" : "test_xjhh.test_api_query_org_bind_card_cz_04",
+  "time" : {
+    "start" : 1578364377398,
+    "stop" : 1578364377766,
+    "duration" : 368
+  },
+  "status" : "failed",
+  "severity" : "blocker"
+}, {
+  "uid" : "ef563c422e8ea501",
+  "name" : "test_xjhh.test_api_trade_check_cz_03",
+  "time" : {
+    "start" : 1578364377334,
+    "stop" : 1578364377397,
+    "duration" : 63
   },
   "status" : "passed",
   "severity" : "blocker"
 }, {
-  "uid" : "4f7fb960957f54d3",
-  "name" : "test_jch.test_api_query_hold_info_10",
+  "uid" : "7376f930fe2f8570",
+  "name" : "test_xjhh.test_api_send_phoneCode_cz_05",
   "time" : {
-    "start" : 1563933037606,
-    "stop" : 1563933041237,
-    "duration" : 3631
+    "start" : 1578364377768,
+    "stop" : 1578364378153,
+    "duration" : 385
   },
-  "status" : "passed",
+  "status" : "failed",
   "severity" : "blocker"
 }, {
-  "uid" : "5c60082c8a31a268",
-  "name" : "test_jch.test_query_login_status_01",
+  "uid" : "c101ea12cffe1f99",
+  "name" : "test_xjhh.test_api_recharge_06",
   "time" : {
-    "start" : 1563933001794,
-    "stop" : 1563933002497,
-    "duration" : 703
+    "start" : 1578364378154,
+    "stop" : 1578364378166,
+    "duration" : 12
   },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "494dcfdac7a645a7",
-  "name" : "test_jch.test_api_recharge_confirm_06",
-  "time" : {
-    "start" : 1563933014976,
-    "stop" : 1563933019065,
-    "duration" : 4089
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "5a04b5f5d757cc63",
-  "name" : "test_jch.test_api_query_bank_center_cz_07",
-  "time" : {
-    "start" : 1563933019066,
-    "stop" : 1563933026147,
-    "duration" : 7081
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "96982d0161070012",
-  "name" : "test_jch.test_api_query_org_bind_card_cz_04",
-  "time" : {
-    "start" : 1563933007561,
-    "stop" : 1563933011255,
-    "duration" : 3694
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "d4a1415f33227712",
-  "name" : "test_jch.test_interest_calculatioin_11",
-  "time" : {
-    "start" : 1563933041239,
-    "stop" : 1563933041993,
-    "duration" : 754
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "a0ce352c4e9c5132",
-  "name" : "test_jch.test_api_query_bank_center_tx_16",
-  "time" : {
-    "start" : 1563933057747,
-    "stop" : 1563933066329,
-    "duration" : 8582
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "5be962be17f8c89e",
-  "name" : "test_jch.test_api_recharge_05",
-  "time" : {
-    "start" : 1563933011257,
-    "stop" : 1563933014975,
-    "duration" : 3718
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "93761c7da84658cc",
-  "name" : "test_jch.test_api_query_bank_center_cr_09",
-  "time" : {
-    "start" : 1563933028068,
-    "stop" : 1563933037605,
-    "duration" : 9537
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "1c271d1d7b3d359",
-  "name" : "test_jch.test_api_cash_15",
-  "time" : {
-    "start" : 1563933054916,
-    "stop" : 1563933057745,
-    "duration" : 2829
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "d77c5889783d4169",
-  "name" : "test_jch.test_api_trade_check_cz_03",
-  "time" : {
-    "start" : 1563933007454,
-    "stop" : 1563933007560,
-    "duration" : 106
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "6f1c8194ea6665ac",
-  "name" : "test_jch.test_api_query_hold_info_sh_13",
-  "time" : {
-    "start" : 1563933043828,
-    "stop" : 1563933049174,
-    "duration" : 5346
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "2204a079f39407b3",
-  "name" : "test_jch.test_api_buy_08",
-  "time" : {
-    "start" : 1563933026148,
-    "stop" : 1563933028067,
-    "duration" : 1919
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "ca67bc4a92f78ea4",
-  "name" : "test_jch.test_api_redemption_12",
-  "time" : {
-    "start" : 1563933041995,
-    "stop" : 1563933043827,
-    "duration" : 1832
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "c63555f8eec627b0",
-  "name" : "test_jch.test_api_query_bank_center_02",
-  "time" : {
-    "start" : 1563933002504,
-    "stop" : 1563933007452,
-    "duration" : 4948
-  },
-  "status" : "passed",
+  "status" : "failed",
   "severity" : "blocker"
 } ]

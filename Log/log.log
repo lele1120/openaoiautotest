@@ -4525,3 +4525,17 @@
 [INFO 2019-11-29 15:16:22]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
 [INFO 2019-11-29 15:16:24]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
 [INFO 2019-11-29 15:16:27]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+[INFO 2020-01-07 10:32:55]初始化配置文件, path=/Users/xuchen/PycharmProjects/openaoiautotest/Conf/config.ini
+[INFO 2020-01-07 10:32:55]执行用例集为：--allure_features=xjhh
+[INFO 2020-01-07 10:32:56]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+[INFO 2020-01-07 10:32:56]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+[ERROR 2020-01-07 10:32:56]statusCode error, expected_code is 0, statusCode is 10004 
+[INFO 2020-01-07 10:32:56]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+[INFO 2020-01-07 10:32:57]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+[ERROR 2020-01-07 10:32:57]statusCode error, expected_code is 0, statusCode is 10004 
+[INFO 2020-01-07 10:32:57]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+[INFO 2020-01-07 10:32:57]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+[INFO 2020-01-07 10:32:57]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+[INFO 2020-01-07 10:32:57]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+[ERROR 2020-01-07 10:32:57]statusCode error, expected_code is 0, statusCode is 10004 
+[INFO 2020-01-07 10:32:57]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics

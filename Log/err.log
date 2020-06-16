@@ -105,3 +105,6 @@
 [ERROR 2019-11-29 11:38:30]statusCode error, expected_code is 0, statusCode is 9888 
 [ERROR 2019-11-29 14:49:09]statusCode error, expected_code is 0, statusCode is 1 
 [ERROR 2019-11-29 14:52:51]statusCode error, expected_code is 0, statusCode is 1 
+[ERROR 2020-01-07 10:32:56]statusCode error, expected_code is 0, statusCode is 10004 
+[ERROR 2020-01-07 10:32:57]statusCode error, expected_code is 0, statusCode is 10004 
+[ERROR 2020-01-07 10:32:57]statusCode error, expected_code is 0, statusCode is 10004 

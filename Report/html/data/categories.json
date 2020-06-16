@@ -1,5 +1,81 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: ",
+      "children" : [ {
+        "name" : "test_xjhh.test_query_login_status_01",
+        "uid" : "5aeac5f2ed38793e",
+        "parentUid" : "fcd162b570a8b3223f492d623fcdc98d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1578364376236,
+          "stop" : 1578364376822,
+          "duration" : 586
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_xjhh.test_api_query_bank_center_02",
+        "uid" : "ecfbc9d2e0733369",
+        "parentUid" : "fcd162b570a8b3223f492d623fcdc98d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1578364376827,
+          "stop" : 1578364377333,
+          "duration" : 506
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_xjhh.test_api_query_org_bind_card_cz_04",
+        "uid" : "a1940ed1c808d0a2",
+        "parentUid" : "fcd162b570a8b3223f492d623fcdc98d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1578364377398,
+          "stop" : 1578364377766,
+          "duration" : 368
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fcd162b570a8b3223f492d623fcdc98d"
+    }, {
+      "name" : "KeyError: 'apiPackSeq'",
+      "children" : [ {
+        "name" : "test_xjhh.test_api_send_phoneCode_cz_05",
+        "uid" : "7376f930fe2f8570",
+        "parentUid" : "970e47b81b0e3aca5cab516d76ee8963",
+        "status" : "failed",
+        "time" : {
+          "start" : 1578364377768,
+          "stop" : 1578364378153,
+          "duration" : 385
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "970e47b81b0e3aca5cab516d76ee8963"
+    }, {
+      "name" : "NameError: name 'bankCardNum' is not defined",
+      "children" : [ {
+        "name" : "test_xjhh.test_api_recharge_06",
+        "uid" : "c101ea12cffe1f99",
+        "parentUid" : "cb69a537d5fc7cafb2d6d211ffde9bdc",
+        "status" : "failed",
+        "time" : {
+          "start" : 1578364378154,
+          "stop" : 1578364378166,
+          "duration" : 12
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cb69a537d5fc7cafb2d6d211ffde9bdc"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
 }

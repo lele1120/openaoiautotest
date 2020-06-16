@@ -1,107 +1,74 @@
 {
-  "total" : 17,
+  "total" : 7,
   "items" : [ {
-    "uid" : "28178444d947a4842c19b922650b63c3",
-    "name" : "jch",
+    "uid" : "a36fc857ecb45ea2ca2911f0de77d440",
+    "name" : "xjhh",
     "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 16,
-      "unknown" : 0,
-      "total" : 16
-    }
-  }, {
-    "uid" : "fdb8485858acb8aaafed028db2013501",
-    "name" : "用户开户状态查询（温旭雲）",
-    "statistic" : {
-      "failed" : 0,
+      "failed" : 5,
       "broken" : 0,
       "skipped" : 0,
       "passed" : 1,
       "unknown" : 0,
-      "total" : 1
+      "total" : 6
     }
   }, {
-    "uid" : "b74bc9360f44a3f58f37aba4e4ac761a",
-    "name" : "资产首页--(郝志阳)",
+    "uid" : "9110944236585394dbe77c9a1856908f",
+    "name" : "用户开户状态查询-黄新",
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     }
   }, {
-    "uid" : "8f0b49a6e4093329476968efe05a2b8e",
-    "name" : "交易通用校验(黄新)-充值",
+    "uid" : "bc58a9d2b1131f051da474f937368172",
+    "name" : "3.2 资产首页（任朝旭）",
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     }
   }, {
-    "uid" : "5cfc5ae7ce63fd7813cbfc898e3a9d55",
-    "name" : "机构绑卡列表查询",
+    "uid" : "8ba774680bdd3af93ee019a08d277083",
+    "name" : "查询机构绑卡信息",
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     }
   }, {
-    "uid" : "2e570611ca833a16a30e1767f2f0901e",
-    "name" : "充值(黄新)",
+    "uid" : "c7fbdbc68cc89ef621c49e53a24502ab",
+    "name" : "短信验证码-充值",
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     }
   }, {
-    "uid" : "a0b8e321dd5355f228ed594cd3c03374",
-    "name" : "充值确认(黄新)",
+    "uid" : "606e14d3285cdabfee9a1c6348273ed2",
+    "name" : "充值（qxx）",
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 0,
       "unknown" : 0,
       "total" : 1
     }
   }, {
-    "uid" : "41a08d430312682f5885a25131d2599c",
-    "name" : "充值后查询余额",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "75db8668451cf06339335c9122da502d",
-    "name" : "购买(黄新)",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "6dca8c2fa44d2eb47fa072f9617e4dbc",
-    "name" : "存入后查询余额",
+    "uid" : "302015a9af65d8e6d2032d19655bee8e",
+    "name" : "交易通用校验-郝志阳,tradeType=10",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
