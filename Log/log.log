@@ -3600,3 +3600,31 @@
 [INFO 2019-09-05 08:34:23]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
 [INFO 2019-09-05 08:34:23]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
 [INFO 2019-09-05 08:34:23]解析yaml, Path:/Users/xuchen/PycharmProjects/openaoiautotest/Params/Param/Basics
+[ERROR 2020-06-16 17:04:30]请检查数据的参数是否正确
+[ERROR 2020-06-16 17:04:30]请检查sql语句 = SELECT * FROM sys_role_menu WHERE role_id = '1' 是否正确
+[INFO 2020-06-16 17:04:30]游标与数据库连接已关闭
+[ERROR 2020-06-16 17:06:13]请检查数据的参数是否正确
+[ERROR 2020-06-16 17:07:36]请检查数据的参数是否正确
+[ERROR 2020-06-16 17:07:36]请检查querykey = 1538420_165__ASSET_AMOUNT_BY_ORG 是否正确
+[ERROR 2020-06-16 17:09:18]请检查数据的参数是否正确
+[ERROR 2020-06-16 17:09:18]请检查querykey = 1538420_165_ASSET_AMOUNT_BY_ORG 是否正确
+[ERROR 2020-06-16 17:11:09]请检查数据的参数是否正确
+[ERROR 2020-06-16 17:11:09]请检查querykey = 1538420_165_ASSET_AMOUNT_BY_ORG 是否正确
+[ERROR 2020-06-16 17:12:21]请检查querykey = 1538420_165_ASSET_AMOUNT_BY_ORG 是否正确
+[ERROR 2020-06-16 17:13:57]请检查querykey = 1538420_165_ASSET_AMOUNT_BY_ORG 是否正确
+[ERROR 2020-06-16 17:15:09]请检查数据的参数是否正确
+[ERROR 2020-06-16 17:15:09]请检查querykey = 1538420_165_ASSET_AMOUNT_BY_ORG 是否正确
+[ERROR 2020-06-16 17:15:53]请检查数据的参数是否正确
+[ERROR 2020-06-16 17:15:53]请检查querykey = 1538420_165_ASSET_AMOUNT_BY_ORG 是否正确
+[ERROR 2020-06-16 17:17:51]请检查querykey = 1538420_165_ASSET_AMOUNT_BY_ORG 是否正确
+[ERROR 2020-06-16 17:19:53]请检查querykey = 1538420_165_ASSET_AMOUNT_BY_ORG 是否正确
+[ERROR 2020-06-16 17:20:09]请检查querykey = 1538420_165_ASSET_AMOUNT_BY_ORG 是否正确
+[ERROR 2020-06-16 17:21:37]请检查querykey = 1538420_165_ASSET_AMOUNT_BY_ORG 是否正确
+[INFO 2020-06-16 17:25:44]redis连接正常，已创建连接
+[INFO 2020-06-16 17:26:05]redis连接正常，已创建连接
+[ERROR 2020-06-16 17:26:46]请检查数据的参数是否正确
+[ERROR 2020-06-16 17:27:11]请检查数据的参数是否正确
+[ERROR 2020-06-16 17:27:47]请检查数据的参数是否正确
+[ERROR 2020-06-16 17:28:36]请检查数据的参数是否正确
+[ERROR 2020-06-16 17:28:49]请检查数据的参数是否正确
+[ERROR 2020-06-16 17:28:57]请检查数据的参数是否正确

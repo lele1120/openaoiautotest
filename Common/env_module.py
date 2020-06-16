@@ -83,7 +83,30 @@ class EnvModule:
             }
             return env_mysql
 
+    def get_env_redis_para(self):
+        """返回redis参数"""
+
+        if self.env == "debug":
+            env_redis = {
+                "host": self.config.redisHost_debug,
+                "password": self.config.redisPassword_debug,
+                "port": int(self.config.redisPort_debug),
+                "db": int(self.config.redisDb_debug),
+                "decode_responses": True
+            }
+            return env_redis
+        elif self.env == "release":
+            env_redis = {
+                "host": self.config.mysqlHost_release,
+                "user": self.config.mysqlUser_release,
+                "password": self.config.mysqlPassword_release,
+                "port": int(self.config.mysqlPort_release),
+                "db": data_db,
+                'charset': self.config.mysqlCharset_release
+            }
+            return env_redis
+
 
 if __name__ == '__main__':
     # at = RequestModule().login_request()
-    print(EnvModule().get_web_header())
+    print(EnvModule().get_env_redis_para())

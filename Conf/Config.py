@@ -31,6 +31,11 @@ class Config:
     VALUE_MYSQL_CHARSET = "mysqlCharset"
     VALUE_MYSQL_DB = "mysqlDb"
 
+    VALUE_REDIS_HOST = "redisHost"
+    VALUE_REDIS_PASSWORD = "redisPasswd"
+    VALUE_REDIS_PORT = "redisPort"
+    VALUE_REDIS_DB = "redisDb"
+
     # [mail]
     VALUE_SMTP_SERVER = "smtpserver"
     VALUE_SENDER = "sender"
@@ -86,6 +91,12 @@ class Config:
                                                 Config.VALUE_MYSQL_CHARSET)
         self.mysqlDB_debug = self.get_conf(Config.TITLE_DEBUG,
                                            Config.VALUE_MYSQL_DB)
+        self.redisHost_debug = self.get_conf(Config.TITLE_DEBUG, Config.VALUE_REDIS_HOST)
+        self.redisPassword_debug = self.get_conf(Config.TITLE_DEBUG,Config.VALUE_REDIS_PASSWORD)
+        self.redisPort_debug = self.get_conf(Config.TITLE_DEBUG,Config.VALUE_REDIS_PORT)
+        self.redisDb_debug = self.get_conf(Config.TITLE_DEBUG,Config.VALUE_REDIS_DB)
+
+
 
         self.tester_release = self.get_conf(Config.TITLE_RELEASE,
                                             Config.VALUE_TESTER)
