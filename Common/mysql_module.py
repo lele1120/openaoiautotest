@@ -104,5 +104,6 @@ class MySqlModule:
 
 
 if __name__ == '__main__':
-    print(MySqlModule().data_read_all("SELECT * FROM a_id_card_auth WHERE ID_NAME = '许晨'", 'bicai_member_id_auth_test4_enc'))
-
+    print(MySqlModule().data_read_all(
+        "SELECT * FROM a_id_card_auth WHERE ID_NAME = '许晨'",
+        'bicai_member_id_auth_test4_enc'))

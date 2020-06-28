@@ -153,80 +153,14 @@ def test_real_name_verify_04():
     :return:
     """
     with pytest.allure.step("身份证,银行卡实名认证"):
-        response_dicts = req.api_request("real_name_verify",
-                                         token=login_token,
-                                         # frontSessionId=front_session_id,
-                                         idNumber=id_number)
+        response_dicts = req.api_request(
+            "real_name_verify",
+            token=login_token,
+            # frontSessionId=front_session_id,
+            idNumber=id_number)
     with pytest.allure.step("结果对比"):
         test.assert_code(
             exp_results("real_name_verify")['code'], response_dicts['code'])
-    Consts.RESULT_LIST.append('True')
-
-
-@allure.feature('sm', "查询认证信息未发短信验证码")
-@allure.severity('blocker')
-def test_real_name_status_no_message_05():
-    """
-    查询认证信息(已开户已绑卡用户未发送短信)
-    :return:
-    """
-
-    with pytest.allure.step("查询认证信息(已开户已绑卡用户未发送短信)"):
-        response_dicts = req.api_request("real_name_status_no_message",
-                                         token=login_token)
-    with pytest.allure.step("结果对比"):
-        test.assert_code(
-            exp_results("real_name_status_no_message")['code'],
-            response_dicts['code'])
-        test.assert_text(
-            exp_results("real_name_status_no_message")['memberAuthComplete'],
-            response_dicts['data']['memberAuthComplete'],
-            "实名认证状态(true:完成 false:未完成)")
-        test.assert_text(
-            exp_results("real_name_status_no_message")['idCardAuthComplete'],
-            response_dicts['data']['idCardAuthComplete'],
-            "身份证认证状态(true:完成 false:未完成)")
-        test.assert_text(
-            exp_results("real_name_status_no_message")['userVerifyFlag'],
-            response_dicts['data']['userVerifyFlag'], "用户是否通过短信校验(0：未通过 1：通过)")
-
-    Consts.RESULT_LIST.append('True')
-
-
-@allure.feature('sm', "短信验证码发送")
-@allure.severity('blocker')
-def test_get_phone_check_code_06():
-    """
-    短信验证码发送
-    :return:
-    """
-
-    with pytest.allure.step("短信验证码发送"):
-        response_dicts = req.api_request("get_phone_check_code",
-                                         token=login_token)
-    with pytest.allure.step("结果对比"):
-        test.assert_code(
-            exp_results("get_phone_check_code")['code'],
-            response_dicts['code'])
-    Consts.RESULT_LIST.append('True')
-    time.sleep(2)
-
-
-@allure.feature('sm', "短信验证码校验")
-@allure.severity('blocker')
-def test_verify_phone_check_code_07():
-    """
-    短信验证码校验
-    :return:
-    """
-
-    with pytest.allure.step("短信验证码校验"):
-        response_dicts = req.api_request("verify_phone_check_code",
-                                         token=login_token)
-    with pytest.allure.step("结果对比"):
-        test.assert_code(
-            exp_results("verify_phone_check_code")['code'],
-            response_dicts['code'])
     Consts.RESULT_LIST.append('True')
 
 

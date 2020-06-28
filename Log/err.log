@@ -68,3 +68,37 @@
 [ERROR 2019-07-19 14:12:57]statusCode error, expected_code is 0, statusCode is E0035 
 [ERROR 2019-07-19 14:12:58]statusCode error, expected_code is 0, statusCode is E0035 
 [ERROR 2019-07-19 14:13:01]statusCode error, expected_code is 0, statusCode is E0035 
+[ERROR 2020-06-28 14:46:50]请检查数据的参数是否正确
+[ERROR 2020-06-28 14:46:50]请检查sql语句 = DELETE FROM a_id_card_auth WHERE ID_NAME = '许晨' 是否正确
+[ERROR 2020-06-28 14:53:43]请检查数据的参数是否正确
+[ERROR 2020-06-28 14:53:43]请检查sql语句 = DELETE FROM a_id_card_auth WHERE ID_NAME = '许晨' 是否正确
+[ERROR 2020-06-28 14:55:53]请检查数据的参数是否正确
+[ERROR 2020-06-28 14:55:53]请检查sql语句 = DELETE FROM a_id_card_auth WHERE ID_NAME = '许晨' 是否正确
+[ERROR 2020-06-28 14:57:56]请检查数据的参数是否正确
+[ERROR 2020-06-28 14:57:56]请检查sql语句 = DELETE FROM a_id_card_auth WHERE PHONE_NUM=to_base64(AES_ENCRYPT('13911645993','MEMBER&AUTH')) 是否正确
+[ERROR 2020-06-28 14:59:56]请检查数据的参数是否正确
+[ERROR 2020-06-28 14:59:56]请检查sql语句 = SELECT * FROM a_id_card_auth WHERE ID_NAME = '许晨' 是否正确
+[ERROR 2020-06-28 15:01:01]请检查数据的参数是否正确
+[ERROR 2020-06-28 15:01:01]请检查sql语句 = SELECT * FROM a_id_card_auth WHERE PHONE_NUM=to_base64(AES_ENCRYPT('13911645993','MEMBER&AUTH')); 是否正确
+[ERROR 2020-06-28 15:01:09]请检查数据的参数是否正确
+[ERROR 2020-06-28 15:01:09]请检查sql语句 = SELECT * FROM a_id_card_auth WHERE PHONE_NUM=to_base64(AES_ENCRYPT('13911645993','MEMBER&AUTH')) 是否正确
+[ERROR 2020-06-28 15:02:14]请检查数据的参数是否正确
+[ERROR 2020-06-28 15:02:14]请检查sql语句 = SELECT * FROM a_id_card_auth WHERE ID_NAME = '许晨' 是否正确
+[ERROR 2020-06-28 15:02:41]请检查数据的参数是否正确
+[ERROR 2020-06-28 15:02:41]请检查sql语句 = SELECT * FROM a_id_card_auth 是否正确
+[ERROR 2020-06-28 15:05:15]请检查数据的参数是否正确
+[ERROR 2020-06-28 15:05:15]请检查sql语句 = DELETE FROM a_id_card_auth WHERE ID_NAME = '许晨' 是否正确
+[ERROR 2020-06-28 15:10:24]请检查数据的参数是否正确
+[ERROR 2020-06-28 15:10:24]请检查sql语句 = DELETE FROM a_id_card_auth WHERE ID_NAME = '许晨' 是否正确
+[ERROR 2020-06-28 15:13:09]请检查数据的参数是否正确
+[ERROR 2020-06-28 15:13:09]请检查sql语句 = DELETE FROM a_id_card_auth WHERE ID_NAME = '许晨' 是否正确
+[ERROR 2020-06-28 15:13:25]请检查数据的参数是否正确
+[ERROR 2020-06-28 15:13:25]请检查sql语句 = DELETE FROM a_id_card_auth WHERE ID_NAME = '许晨' 是否正确
+[ERROR 2020-06-28 15:14:07]请检查数据的参数是否正确
+[ERROR 2020-06-28 15:14:07]请检查sql语句 = DELETE FROM a_id_card_auth WHERE ID_NAME = '许晨' 是否正确
+[ERROR 2020-06-28 15:20:43]请检查数据的参数是否正确
+[ERROR 2020-06-28 15:20:43]请检查sql语句 = DELETE FROM a_id_card_auth WHERE ID_NAME = '许晨' 是否正确
+[ERROR 2020-06-28 15:20:57]请检查数据的参数是否正确
+[ERROR 2020-06-28 15:20:57]请检查sql语句 = DELETE FROM a_id_card_auth WHERE ID_NAME = '许晨'; 是否正确
+[ERROR 2020-06-28 15:25:47]请检查数据的参数是否正确
+[ERROR 2020-06-28 15:25:47]请检查sql语句 = DELETE FROM a_id_card_auth WHERE ID_NAME = '许晨'; 是否正确

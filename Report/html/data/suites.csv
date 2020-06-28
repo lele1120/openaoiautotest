@@ -1,66 +1,26 @@
 "Status","Name","Duration in ms","Description"
-"passed","TestCase.test_jch.test_api_cash_15","2829","
-    提现(黄新)
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_trade_check_cz_03","106","
-    交易通用校验-(黄新),10-充值
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_query_bank_center_cr_09","9537","
-    存入后查询余额
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_redemption_12","1832","
-    赎回(黄新)
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_query_hold_info_10","3631","
-    持有列表--(郝志阳)
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_query_bank_center_tx_16","8582","
-    提现后查询余额
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_query_bank_center_zq_14","5740","
-    支取后查询余额
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_recharge_05","3718","
-    充值(黄新)
-    :return: 
-    "
-"passed","TestCase.test_jch.test_query_login_status_01","703","
-    用户开户状态查询
+"passed","TestCase.test_smrz.test_real_name_status_end_08","86","
+    查询认证信息(已开户已绑卡用户)
     :param login: 预制登录信息 获取授权token:
     :return:
     "
-"passed","TestCase.test_jch.test_interest_calculatioin_11","754","
-    赎回利息试算(黄新)
-    :return: 
+"passed","TestCase.test_smrz.test_real_name_status_change_02","2217","
+    查询认证信息_清除认证信息后(未开户未绑卡用户)
+    :param login: 预制登录信息 获取授权token:
+    :return:
     "
-"passed","TestCase.test_jch.test_api_query_hold_info_sh_13","5346","
-    持有列表-赎回后--(郝志阳)
-    :return: 
+"passed","TestCase.test_smrz.test_id_card_ocr_03","2289","
+    身份证OCR(保存图片)
+    :param login:
+    :return:
     "
-"passed","TestCase.test_jch.test_api_buy_08","1919","
-    购买(黄新)
-    :return: 
+"passed","TestCase.test_smrz.test_real_name_status_01","274","
+    查询认证信息(已开户已绑卡用户)
+    :param login: 预制登录信息 获取授权token:
+    :return:
     "
-"passed","TestCase.test_jch.test_api_query_bank_center_02","4948","
-    资产首页余额查询
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_query_bank_center_cz_07","7081","
-    充值后查询余额
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_query_org_bind_card_cz_04","3694","
-    机构绑卡列表查询
-    :return: 
-    "
-"passed","TestCase.test_jch.test_api_recharge_confirm_06","4089","
-    充值确认(黄新)
-    :return: 
+"passed","TestCase.test_smrz.test_real_name_verify_04","2006","
+    身份证,银行卡实名认证
+    :param login:
+    :return:
     "
