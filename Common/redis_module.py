@@ -31,15 +31,15 @@ class RedisModule:
     def get_evn_redis_para(self):
         return self.get_environment.get_env_redis_para()
 
-    def create_connect(self):
-        """
-        初始化类，创建redis连接，创建游标
-        """
-        try:
-            redis.Redis(**self.get_evn_redis_para())
-            log.info('redis连接正常，已创建连接')
-        except Exception:
-            log.error('请检查数据的参数是否正确')
+    # def create_connect(self):
+    #     """
+    #     初始化类，创建redis连接，创建游标
+    #     """
+    #     try:
+    #         redis.Redis(**self.get_evn_redis_para())
+    #         log.info('redis连接正常，已创建连接')
+    #     except Exception:
+    #         log.error('请检查数据的参数是否正确')
 
     def data_read_by_org(self, member_id, org_id):
         """
